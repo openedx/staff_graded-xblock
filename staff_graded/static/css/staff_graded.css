@@ -1,0 +1,9 @@
+/* CSS for StaffGradedXBlock */
+
+.staff_graded_block .count {
+    font-weight: bold;
+}
+
+.staff_graded_block p {
+    cursor: pointer;
+}
