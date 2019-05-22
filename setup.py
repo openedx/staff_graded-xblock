@@ -32,6 +32,7 @@ setup(
         'markdown',
         'XBlock',
         'xblock-utils>=v1.0.0',
+        'web-fragments',
     ],
     entry_points={
         'xblock.v1': [

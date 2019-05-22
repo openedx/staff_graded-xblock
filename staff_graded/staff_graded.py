@@ -13,7 +13,7 @@ import pkg_resources
 from webob import Response
 from xblock.core import XBlock
 from xblock.fields import String, Float, Scope
-from xblock.fragment import Fragment
+from web_fragments.fragment import Fragment
 from xblock.runtime import NoSuchServiceError
 from xblock.scorable import ScorableXBlockMixin, Score
 from xblockutils.resources import ResourceLoader
