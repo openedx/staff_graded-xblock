@@ -182,7 +182,10 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
             log.info('Processing %d byte score file %s for %s', score_file.size, score_file.name, self.location)
             block_id = self.location
             block_weight = self.weight
-            processor = grade_utils.get_score_processor(block_id=str(block_id), max_points=block_weight)
+            processor = grade_utils.get_score_processor(
+                block_id=str(block_id),
+                max_points=block_weight,
+                user_id=self.runtime.user_id)
             processor.process_file(score_file, autocommit=True)
             data = processor.status()
             log.info('Processed file %s for %s -> %s saved, %s processed, %s error. (async=%s)',
