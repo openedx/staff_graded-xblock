@@ -51,6 +51,7 @@
   this.StaffGradedProblem = function(runtime, element, json_args) {
     var $element = $(element);
     var fileInput = $element.find('.file-input');
+    var $exportButton = $element.find('.export-button');
     fileInput.change(function(e){
       var firstFile = this.files[0];
       var self = this;
@@ -83,6 +84,18 @@
       });
 
     });
+
+    $exportButton.click(function(e) {
+        e.preventDefault();
+        var url = $exportButton.attr('href') + '?' + $.param(
+            {
+                track: $element.find('.track-field').val(),
+                cohort: $element.find('.cohort-field').val()
+            }
+        );
+        location.href = url;
+    });
+
   };
 
 }).call(this);
