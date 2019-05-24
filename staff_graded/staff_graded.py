@@ -11,13 +11,23 @@ import markdown
 import pkg_resources
 
 from webob import Response
+from web_fragments.fragment import Fragment
 from xblock.core import XBlock
 from xblock.fields import String, Float, Scope
-from web_fragments.fragment import Fragment
 from xblock.runtime import NoSuchServiceError
 from xblock.scorable import ScorableXBlockMixin, Score
 from xblockutils.resources import ResourceLoader
 from xblockutils.studio_editable import StudioEditableXBlockMixin
+
+try:
+    from openedx.core.djangoapps.course_groups.cohorts import get_course_cohorts
+except ImportError:
+    get_course_cohorts = lambda course_key: []
+
+try:
+    from course_modes.models import CourseMode
+except ImportError:
+    CourseMode = None
 
 
 _ = lambda text: text
@@ -93,6 +103,16 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
         context['display_name'] = self.display_name
         context['is_staff'] = self.runtime.user_is_staff
 
+        course_id = self.location.course_key
+        context['available_cohorts'] = [cohort.name for cohort in get_course_cohorts(course_id=course_id)]
+        if CourseMode:
+            context['available_tracks'] = [
+                (mode.slug, mode.name) for mode in
+                CourseMode.modes_for_course(course_id, only_selectable=False)
+                ]
+        else:
+            context['available_tracks'] = [('audit', 'Audit Track'), ('masters', "Master's Track"), ('verified', "Verified Track")]
+
         if context['is_staff']:
             from crum import get_current_request
             from django.middleware.csrf import get_token
@@ -162,6 +182,7 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
         """
         Dummy method to generate initial i18n
         """
+        from django.utils import translation
         return translation.gettext_noop('Dummy')
 
     @XBlock.handler
@@ -205,13 +226,17 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
         if not self.runtime.user_is_staff:
             return Response('not allowed', status_code=403)
 
+        track = request.GET.get('track', None)
+        cohort = request.GET.get('cohort', None)
         grade_utils = self.runtime.service(self, 'grade_utils')
 
         buf = io.BytesIO()
         grade_utils.get_score_processor(
             block_id=str(self.location),
             max_points=self.weight,
-            display_name=self.display_name).write_file(buf)
+            display_name=self.display_name,
+            track=track,
+            cohort=cohort).write_file(buf)
         resp = Response(buf.getvalue())
         resp.content_type = 'text/csv'
         resp.content_disposition = 'attachment; filename="%s.csv"' % self.location
