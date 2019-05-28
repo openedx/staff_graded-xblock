@@ -26,9 +26,11 @@ except ImportError:
 
 try:
     from course_modes.models import CourseMode
+    modes_for_course = CourseMode.modes_for_course
 except ImportError:
-    CourseMode = None
+    modes_for_course = lambda course_key: [('audit', 'Audit Track'), ('masters', "Master's Track"), ('verified', "Verified Track")]
 
+from bulk_grades.api import get_score, set_score, ScoreCSVProcessor
 
 _ = lambda text: text
 
@@ -36,7 +38,6 @@ log = logging.getLogger(__name__)
 
 
 @XBlock.needs('settings')
-@XBlock.needs('grade_utils')
 @XBlock.needs('i18n')
 @XBlock.needs('user')
 class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
@@ -105,13 +106,10 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
 
         course_id = self.location.course_key
         context['available_cohorts'] = [cohort.name for cohort in get_course_cohorts(course_id=course_id)]
-        if CourseMode:
-            context['available_tracks'] = [
-                (mode.slug, mode.name) for mode in
-                CourseMode.modes_for_course(course_id, only_selectable=False)
-                ]
-        else:
-            context['available_tracks'] = [('audit', 'Audit Track'), ('masters', "Master's Track"), ('verified', "Verified Track")]
+        context['available_tracks'] = [
+            (mode.slug, mode.name) for mode in
+            modes_for_course(course_id, only_selectable=False)
+            ]
 
         if context['is_staff']:
             from crum import get_current_request
@@ -127,7 +125,7 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
                                           in ('csrf_token', 'import_url', 'export_url', 'poll_url', 'id')})
 
         try:
-            score = self.runtime.service(self, "grade_utils").get_score(self.location, self.runtime.user_id) or {}
+            score = get_score(self.location, self.runtime.user_id) or {}
             context['grades_available'] = True
         except NoSuchServiceError:
             context['grades_available'] = False
@@ -192,7 +190,7 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
         """
         if not self.runtime.user_is_staff:
             return Response('not allowed', status_code=403)
-        grade_utils = self.runtime.service(self, 'grade_utils')
+
         _ = self.runtime.service(self, "i18n").ugettext
 
         try:
@@ -203,7 +201,7 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
             log.info('Processing %d byte score file %s for %s', score_file.size, score_file.name, self.location)
             block_id = self.location
             block_weight = self.weight
-            processor = grade_utils.get_score_processor(
+            processor = ScoreCSVProcessor(
                 block_id=str(block_id),
                 max_points=block_weight,
                 user_id=self.runtime.user_id)
@@ -228,10 +226,9 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
 
         track = request.GET.get('track', None)
         cohort = request.GET.get('cohort', None)
-        grade_utils = self.runtime.service(self, 'grade_utils')
 
         buf = io.BytesIO()
-        grade_utils.get_score_processor(
+        ScoreCSVProcessor(
             block_id=str(self.location),
             max_points=self.weight,
             display_name=self.display_name,
@@ -249,13 +246,12 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
         """
         if not self.runtime.user_is_staff:
             return Response('not allowed', status_code=403)
-        grade_utils = self.runtime.service(self, 'grade_utils')
         try:
             result_id = request.POST['result_id']
         except KeyError:
             data = {'message': 'missing'}
         else:
-            results = grade_utils.get_score_processor().get_deferred_result(result_id)
+            results = ScoreCSVProcessor().get_deferred_result(result_id)
             if results.ready():
                 data = results.get()
                 log.info('Got results from celery %r', data)
@@ -275,7 +271,7 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
         Returns:
             Score(raw_earned=float, raw_possible=float)
         """
-        score = self.runtime.service(self, "grade_utils").get_score(self.runtime.user_id, self.location)
+        score = get_score(self.runtime.user_id, self.location)
         score = score or {'grade': 0, 'max_grade': 1}
         return Score(raw_earned=score['grade'], raw_possible=score['max_grade'])
 
@@ -294,11 +290,11 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
             None
         """
         state = json.dumps({'grader': self._get_current_username()})
-        self.runtime.service(self, "grade_utils").set_score(self.location,
-                                                            self.runtime.user_id,
-                                                            score.raw_earned,
-                                                            score.raw_possible,
-                                                            state=state)
+        set_score(self.location,
+                  self.runtime.user_id,
+                  score.raw_earned,
+                  score.raw_possible,
+                  state=state)
 
     def publish_grade(self):
         pass
