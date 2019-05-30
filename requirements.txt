@@ -5,3 +5,4 @@ transifex-client
 markdown
 path.py
 XBlock>=1.2.2
+edx-bulk-grades

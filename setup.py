@@ -33,6 +33,7 @@ setup(
         'XBlock',
         'xblock-utils>=v1.0.0',
         'web-fragments',
+        'edx-bulk-grades @ git+https://github.com/davestgermain/edx-bulk-grades@ac1566fcf6026ca3695def76e8449b0194b21114',
     ],
     entry_points={
         'xblock.v1': [
