@@ -57,6 +57,11 @@
       var self = this;
       if (firstFile == undefined) {
         return;
+      } else if (firstFile.size > 4194303) {
+        var message = gettext('Files must be less than 4MB. Please split the file into smaller chunks and upload again.');
+        $(`#${json_args.id}-status`).show();
+        $(`#${json_args.id}-status .message`).html(message);
+        return;
       }
       var formData = new FormData();
       formData.append('csrfmiddlewaretoken', json_args.csrf_token);

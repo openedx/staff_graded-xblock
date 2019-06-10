@@ -38,6 +38,7 @@
                 </li>
                 <li><strong>{% trans "Step 3:" %}</strong> {% trans "Import scores." %}<br>
                     <p>{% trans "Upload the filled out CSV. Learners will immediately see their grades after import completes." %}</p>
+                    <p><em>{% trans "Note: Supports file sizes up to 4MB." %}</em></p>
                     <form action="{{import_url}}" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="csrfmiddlewaretoken" value="{{csrf_token}}">
                         <label class="submit btn btn-brand">
