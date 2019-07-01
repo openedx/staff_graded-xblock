@@ -227,7 +227,7 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
         track = request.GET.get('track', None)
         cohort = request.GET.get('cohort', None)
 
-        buf = io.BytesIO()
+        buf = io.StringIO()
         ScoreCSVProcessor(
             block_id=str(self.location),
             max_points=self.weight,
