@@ -131,7 +131,7 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
             context['grades_available'] = False
         else:
             if score:
-                grade = score['grade'] * self.weight
+                grade = score['score']
                 context['score_string'] = _('{score} / {total} points').format(score=grade, total=self.weight)
             else:
                 context['score_string'] = _('{total} points possible').format(total=self.weight)

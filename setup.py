@@ -22,7 +22,7 @@ def package_data(pkg, roots):
 
 setup(
     name='staff_graded-xblock',
-    version='0.3',
+    version='0.4',
     description='Staff Graded XBlock',   # TODO: write a better description.
     license='AGPL v3',          # TODO: choose a license: 'AGPL v3' and 'Apache 2.0' are popular.
     packages=[
@@ -33,7 +33,7 @@ setup(
         'XBlock',
         'xblock-utils>=v1.0.0',
         'web-fragments',
-        'edx-bulk-grades>=0.1.1',
+        'edx-bulk-grades>=0.4',
     ],
     entry_points={
         'xblock.v1': [
