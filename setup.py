@@ -22,7 +22,7 @@ def package_data(pkg, roots):
 
 setup(
     name='staff_graded-xblock',
-    version='0.4',
+    version='0.5',
     description='Staff Graded XBlock',   # TODO: write a better description.
     license='AGPL v3',          # TODO: choose a license: 'AGPL v3' and 'Apache 2.0' are popular.
     classifiers=[
