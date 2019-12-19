@@ -22,7 +22,7 @@ def package_data(pkg, roots):
 
 setup(
     name='staff_graded-xblock',
-    version='0.5',
+    version='0.6',
     description='Staff Graded XBlock',   # TODO: write a better description.
     license='AGPL v3',          # TODO: choose a license: 'AGPL v3' and 'Apache 2.0' are popular.
     classifiers=[
@@ -34,10 +34,12 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.5',
         'Framework :: Django',
         'Framework :: Django :: 1.11',
         'Framework :: Django :: 2.0',
+        'Framework :: Django :: 2.1',
+        'Framework :: Django :: 2.2',
     ],
     packages=[
         'staff_graded',
