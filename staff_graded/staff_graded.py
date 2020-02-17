@@ -214,7 +214,7 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
                      data.get('total', 0),
                      len(data.get('error_rows', [])),
                      data.get('waiting', False))
-        return Response(json.dumps(data), content_type='application/json')
+        return Response(json_body=data)
 
     @XBlock.handler
     def csv_export_handler(self, request, suffix=''):  # pylint: disable=unused-argument
@@ -258,7 +258,7 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
             else:
                 data = {'waiting': True, 'result_id': result_id}
                 log.info('Still waiting for %s', result_id)
-        return Response(json.dumps(data), content_type='application/json')
+        return Response(json_body=data)
 
     def max_score(self):
         return self.weight
