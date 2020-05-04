@@ -1,17 +1,10 @@
 language: python
 python:
-- 2.7
 - 3.5
+- 3.8
 env:
-- TOXENV=django111
-- TOXENV=django20
-matrix:
-  exclude:
-  - python: 2.7
-    env: TOXENV=django20
-  include:
-  - python: 3.5
-    env: TOXENV=quality
+- TOXENV=django22
+- TOXENV=quality
 cache:
 - pip
 before_install:
@@ -28,6 +21,7 @@ deploy:
   distributions: sdist bdist_wheel
   on:
     tags: true
-    condition: "$TOXENV = quality"
+    python: 3.5
+    condition: $TOXENV = quality
   password:
     secure: S7FvyGwjNYFOHGFXVoX7YR9Adm11eLgVRI5xAX2npZEnz0wbi16KCM5FI9JrDhRbLjFlL0xoPbUZiOsxQFBB5DGE2OgxXpIcvxkRMFWycyofOQ3io7OcfccpL0JZKHkW5GYh+2d+TJfoMBbV+vQfjWtJ69c9hk75saTcBesRruHC1C2AS4hDs6QrJP7Df3MF+WnxkSKOk/bfLs9u3oZ3RJLutvpas72g+I5NFTw0qDBAvpqCb2XKOGwEKFWpsgBInl9BnJcgQg46eaxBLR17hr8wIvCOtbXcM+VOgcaItPas+Lc1cuCrTGuNp4SMIGvZLO5TGzguc5WGuSmnG/cXACE2TlKy1WLRVpSyAbrdEWNaIIWImeVMjQso9APGLkyiEQTNUDCqSiaA8bHAQz97YaaWxVgKeumEx9XdSDiE+BPyFl2WB9SQ2/gE2NaMMutA7rTZsbuSOrUO5mOLLspLpBKrxu0h9CNLDxH3jzsudZ6FvVq6nQZb5FsFy3hCKLUXKLTjW6Xbu/ovTFq9+k0d62kZyev4MiDXBz/sAuBJzujAHnjQW7PLKy4l8m7GQazPmgXMe8kHuC/l1c2+OAMrM/3K1FkmXFI5FmuAM5McTZvtlgK6oLzVjnc9Vx9U13yW25rQ8B7N0xSzKsk8sOvYZ4Gn2SRHGVITg3j8hAuQ9gE=
