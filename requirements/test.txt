@@ -11,8 +11,6 @@ billiard==3.3.0.23        # via -r requirements/base.txt, celery
 celery==3.1.26.post2      # via -r requirements/base.txt, edx-celeryutils
 certifi==2020.4.5.1       # via -r requirements/base.txt, requests
 chardet==3.0.4            # via -r requirements/base.txt, requests
-codecov==2.1.0            # via -r requirements/test.in
-coverage==5.1             # via codecov
 django-crum==0.7.6        # via -r requirements/base.txt, super-csv
 django-model-utils==4.0.0  # via -r requirements/base.txt, edx-bulk-grades, edx-celeryutils, super-csv
 django==2.2.12            # via -r requirements/base.txt, django-crum, django-model-utils, djangorestframework, edx-bulk-grades, edx-celeryutils, jsonfield2, super-csv
@@ -26,7 +24,7 @@ idna==2.9                 # via -r requirements/base.txt, requests
 importlib-metadata==1.6.0  # via -r requirements/base.txt, markdown, path
 jsonfield2==4.0.0.post0   # via -r requirements/base.txt, edx-celeryutils
 kombu==3.0.37             # via -r requirements/base.txt, celery
-lxml==4.5.0               # via -r requirements/base.txt, xblock
+lxml==4.5.1               # via -r requirements/base.txt, xblock
 mako==1.1.2               # via -r requirements/base.txt, xblock-utils
 markdown==3.2.2           # via -r requirements/base.txt
 markupsafe==1.1.1         # via -r requirements/base.txt, mako, xblock
@@ -37,7 +35,7 @@ pymongo==3.10.1           # via -r requirements/base.txt, edx-opaque-keys
 python-dateutil==2.8.1    # via -r requirements/base.txt, xblock
 pytz==2020.1              # via -r requirements/base.txt, celery, django, fs, xblock
 pyyaml==5.3.1             # via -r requirements/base.txt, xblock
-requests==2.23.0          # via -r requirements/base.txt, codecov, edx-bulk-grades, slumber
+requests==2.23.0          # via -r requirements/base.txt, edx-bulk-grades, slumber
 simplejson==3.17.0        # via -r requirements/base.txt, super-csv, xblock-utils
 six==1.14.0               # via -r requirements/base.txt, edx-opaque-keys, fs, python-dateutil, stevedore, xblock
 slumber==0.7.1            # via -r requirements/base.txt, edx-bulk-grades

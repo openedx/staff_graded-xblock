@@ -10,7 +10,7 @@ cache:
 before_install:
 - pip install --upgrade pip
 install:
-- pip install -r travis.txt
+- pip install -r requirements/travis.txt
 script:
 - echo "Success"
 after_success:

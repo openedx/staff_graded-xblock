@@ -24,7 +24,7 @@ idna==2.9                 # via requests
 importlib-metadata==1.6.0  # via markdown, path
 jsonfield2==4.0.0.post0   # via edx-celeryutils
 kombu==3.0.37             # via celery
-lxml==4.5.0               # via xblock
+lxml==4.5.1               # via xblock
 mako==1.1.2               # via xblock-utils
 markdown==3.2.2           # via -r requirements/base.in
 markupsafe==1.1.1         # via mako, xblock

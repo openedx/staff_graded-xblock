@@ -4,63 +4,24 @@
 #
 #    make upgrade
 #
-amqp==1.4.9               # via -r requirements/test.txt, kombu
-anyjson==0.3.3            # via -r requirements/test.txt, kombu
-appdirs==1.4.4            # via -r requirements/test.txt, -r requirements/tox.txt, fs, virtualenv
-billiard==3.3.0.23        # via -r requirements/test.txt, celery
-celery==3.1.26.post2      # via -r requirements/test.txt, edx-celeryutils
-certifi==2020.4.5.1       # via -r requirements/test.txt, requests
-chardet==3.0.4            # via -r requirements/test.txt, requests
-codecov==2.1.0            # via -r requirements/test.txt
-coverage==5.1             # via -r requirements/test.txt, codecov
+appdirs==1.4.4            # via -r requirements/tox.txt, virtualenv
+certifi==2020.4.5.1       # via requests
+chardet==3.0.4            # via requests
+codecov==2.1.0            # via -r requirements/travis.in
+coverage==5.1             # via codecov
 distlib==0.3.0            # via -r requirements/tox.txt, virtualenv
-django-crum==0.7.6        # via -r requirements/test.txt, super-csv
-django-model-utils==4.0.0  # via -r requirements/test.txt, edx-bulk-grades, edx-celeryutils, super-csv
-django==2.2.12            # via -r requirements/test.txt, django-crum, django-model-utils, djangorestframework, edx-bulk-grades, edx-celeryutils, jsonfield2, super-csv
-djangorestframework==3.11.0  # via -r requirements/test.txt, super-csv
-edx-bulk-grades==0.6.8    # via -r requirements/test.txt
-edx-celeryutils==0.5.0    # via -r requirements/test.txt, super-csv
-edx-opaque-keys==2.1.0    # via -r requirements/test.txt, edx-bulk-grades
 filelock==3.0.12          # via -r requirements/tox.txt, tox, virtualenv
-fs==2.4.11                # via -r requirements/test.txt, xblock
-future==0.18.2            # via -r requirements/test.txt, edx-celeryutils
-idna==2.9                 # via -r requirements/test.txt, requests
-importlib-metadata==1.6.0  # via -r requirements/test.txt, -r requirements/tox.txt, importlib-resources, markdown, path, pluggy, tox, virtualenv
+idna==2.9                 # via requests
+importlib-metadata==1.6.0  # via -r requirements/tox.txt, importlib-resources, pluggy, tox, virtualenv
 importlib-resources==1.5.0  # via -r requirements/tox.txt, virtualenv
-jsonfield2==4.0.0.post0   # via -r requirements/test.txt, edx-celeryutils
-kombu==3.0.37             # via -r requirements/test.txt, celery
-lxml==4.5.0               # via -r requirements/test.txt, xblock
-mako==1.1.2               # via -r requirements/test.txt, xblock-utils
-markdown==3.2.2           # via -r requirements/test.txt
-markupsafe==1.1.1         # via -r requirements/test.txt, mako, xblock
-packaging==20.3           # via -r requirements/tox.txt, tox
-path.py==12.4.0           # via -r requirements/test.txt
-path==13.1.0              # via -r requirements/test.txt, path.py
-pbr==5.4.5                # via -r requirements/test.txt, stevedore
+packaging==20.4           # via -r requirements/tox.txt, tox
 pluggy==0.13.1            # via -r requirements/tox.txt, tox
 py==1.8.1                 # via -r requirements/tox.txt, tox
-pymongo==3.10.1           # via -r requirements/test.txt, edx-opaque-keys
 pyparsing==2.4.7          # via -r requirements/tox.txt, packaging
-python-dateutil==2.8.1    # via -r requirements/test.txt, xblock
-pytz==2020.1              # via -r requirements/test.txt, celery, django, fs, xblock
-pyyaml==5.3.1             # via -r requirements/test.txt, xblock
-requests==2.23.0          # via -r requirements/test.txt, codecov, edx-bulk-grades, slumber
-simplejson==3.17.0        # via -r requirements/test.txt, super-csv, xblock-utils
-six==1.14.0               # via -r requirements/test.txt, -r requirements/tox.txt, -r requirements/travis.in, edx-opaque-keys, fs, packaging, python-dateutil, stevedore, tox, virtualenv, xblock
-slumber==0.7.1            # via -r requirements/test.txt, edx-bulk-grades
-sqlparse==0.3.1           # via -r requirements/test.txt, django
-stevedore==1.32.0         # via -r requirements/test.txt, edx-opaque-keys
-super-csv==0.9.8          # via -r requirements/test.txt, edx-bulk-grades
+requests==2.23.0          # via codecov
+six==1.14.0               # via -r requirements/tox.txt, -r requirements/travis.in, packaging, tox, virtualenv
 toml==0.10.1              # via -r requirements/tox.txt, tox
 tox==3.15.0               # via -r requirements/tox.txt
-typing==3.7.4.1           # via -r requirements/test.txt, fs
-urllib3==1.25.9           # via -r requirements/test.txt, requests
+urllib3==1.25.9           # via requests
 virtualenv==20.0.20       # via -r requirements/tox.txt, tox
-web-fragments==0.3.2      # via -r requirements/test.txt, xblock, xblock-utils
-webob==1.8.6              # via -r requirements/test.txt, xblock
-xblock-utils==2.1.1       # via -r requirements/test.txt
-xblock==1.3.1             # via -r requirements/test.txt, xblock-utils
-zipp==1.2.0               # via -r requirements/test.txt, -r requirements/tox.txt, importlib-metadata, importlib-resources
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools
+zipp==1.2.0               # via -r requirements/tox.txt, importlib-metadata, importlib-resources

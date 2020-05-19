@@ -9,7 +9,7 @@ distlib==0.3.0            # via virtualenv
 filelock==3.0.12          # via tox, virtualenv
 importlib-metadata==1.6.0  # via importlib-resources, pluggy, tox, virtualenv
 importlib-resources==1.5.0  # via virtualenv
-packaging==20.3           # via tox
+packaging==20.4           # via tox
 pluggy==0.13.1            # via tox
 py==1.8.1                 # via tox
 pyparsing==2.4.7          # via packaging
