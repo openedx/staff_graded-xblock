@@ -20,6 +20,29 @@ def package_data(pkg, roots):
     return {pkg: data}
 
 
+def load_requirements(*requirements_paths):
+    """
+    Load all requirements from the specified requirements files.
+    Returns a list of requirement strings.
+    """
+    requirements = set()
+    for path in requirements_paths:
+        with open(path) as reqs:
+            requirements.update(
+                line.split('#')[0].strip() for line in reqs
+                if is_requirement(line.strip())
+            )
+    return list(requirements)
+
+
+def is_requirement(line):
+    """
+    Return True if the requirement line is a package requirement;
+    that is, it is not blank, a comment, a URL, or an included file.
+    """
+    return line and not line.startswith(('-r', '#', '-e', 'git+', '-c'))
+
+
 setup(
     name='staff_graded-xblock',
     version='0.8',
@@ -39,13 +62,7 @@ setup(
     packages=[
         'staff_graded',
     ],
-    install_requires=[
-        'markdown',
-        'XBlock',
-        'xblock-utils>=v1.0.0',
-        'web-fragments',
-        'edx-bulk-grades>=0.4',
-    ],
+    install_requires=load_requirements('requirements/base.in'),
     entry_points={
         'xblock.v1': [
             'staffgradedxblock = staff_graded:StaffGradedXBlock',

@@ -1,0 +1,6 @@
+# Development requirements
+-c constraints.txt
+
+django-statici18n
+edx-i18n-tools
+transifex-client
