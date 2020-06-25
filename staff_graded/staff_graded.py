@@ -1,7 +1,7 @@
 """
 XBlock for Staff Graded Points
 """
-from __future__ import absolute_import, division, print_function, unicode_literals
+
 
 import io
 import json
@@ -9,9 +9,8 @@ import logging
 
 import markdown
 import pkg_resources
-
-from webob import Response
 from web_fragments.fragment import Fragment
+from webob import Response
 from xblock.core import XBlock
 from xblock.fields import String, Float, Scope
 from xblock.runtime import NoSuchServiceError
