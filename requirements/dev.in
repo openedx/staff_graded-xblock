@@ -1,6 +1,12 @@
 # Development requirements
 -c constraints.txt
+-r pip_tools.in
 
 django-statici18n
 edx-i18n-tools
 transifex-client
+
+-r base.in
+-r test.in
+-r tox.in
+-r travis.in

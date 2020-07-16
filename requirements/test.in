@@ -2,3 +2,5 @@
 -c constraints.txt
 
 -r base.txt               # Core dependencies for the cookiecutter
+edx-lint
+pytest-cov

@@ -2,6 +2,9 @@
 *.pyc
 *.egg-info
 
+# QA
+coverage.xml
+
 ### Editor and IDE artifacts
 *~
 *.swp
@@ -18,3 +21,5 @@ var/
 
 # virtualenvironment
 venv/
+
+node_modules/
