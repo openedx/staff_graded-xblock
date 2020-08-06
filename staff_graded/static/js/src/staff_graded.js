@@ -103,4 +103,7 @@
 
   };
 
+  this.StaffGradedXBlock = function(runtime, element) {
+  };
+
 }).call(this);
