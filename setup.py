@@ -45,7 +45,7 @@ def is_requirement(line):
 
 setup(
     name='staff_graded-xblock',
-    version='0.8',
+    version='0.9',
     description='Staff Graded XBlock',   # TODO: write a better description.
     license='AGPL v3',          # TODO: choose a license: 'AGPL v3' and 'Apache 2.0' are popular.
     classifiers=[
