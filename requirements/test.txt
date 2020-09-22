@@ -19,7 +19,7 @@ django-crum==0.7.7        # via -r requirements/base.txt, super-csv
 django-model-utils==4.0.0  # via -r requirements/base.txt, edx-bulk-grades, edx-celeryutils, super-csv
 django==2.2.16            # via -r requirements/base.txt, django-crum, django-model-utils, djangorestframework, edx-bulk-grades, edx-celeryutils, jsonfield2, super-csv
 djangorestframework==3.11.1  # via -r requirements/base.txt, super-csv
-edx-bulk-grades==0.8.0    # via -r requirements/base.txt
+edx-bulk-grades==0.8.1    # via -r requirements/base.txt
 edx-celeryutils==0.5.2    # via -r requirements/base.txt, super-csv
 edx-lint==1.5.2           # via -r requirements/test.in
 edx-opaque-keys==2.1.1    # via -r requirements/base.txt, edx-bulk-grades

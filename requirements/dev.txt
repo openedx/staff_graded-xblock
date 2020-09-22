@@ -20,10 +20,10 @@ distlib==0.3.1            # via -r requirements/tox.txt, virtualenv
 django-appconf==1.0.4     # via django-statici18n
 django-crum==0.7.7        # via -r requirements/base.txt, super-csv
 django-model-utils==4.0.0  # via -r requirements/base.txt, edx-bulk-grades, edx-celeryutils, super-csv
-django-statici18n==1.9.0  # via -r requirements/dev.in
+django-statici18n==2.0.0  # via -r requirements/dev.in
 django==2.2.16            # via -r requirements/base.txt, django-appconf, django-crum, django-model-utils, django-statici18n, djangorestframework, edx-bulk-grades, edx-celeryutils, edx-i18n-tools, jsonfield2, super-csv
 djangorestframework==3.11.1  # via -r requirements/base.txt, super-csv
-edx-bulk-grades==0.8.0    # via -r requirements/base.in, -r requirements/base.txt
+edx-bulk-grades==0.8.1    # via -r requirements/base.in, -r requirements/base.txt
 edx-celeryutils==0.5.2    # via -r requirements/base.txt, super-csv
 edx-i18n-tools==0.5.3     # via -r requirements/dev.in
 edx-lint==1.5.2           # via -r requirements/test.in
