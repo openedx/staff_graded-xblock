@@ -14,7 +14,7 @@ django-crum==0.7.7        # via super-csv
 django-model-utils==4.0.0  # via edx-bulk-grades, edx-celeryutils, super-csv
 django==2.2.16            # via django-crum, django-model-utils, djangorestframework, edx-bulk-grades, edx-celeryutils, jsonfield2, super-csv
 djangorestframework==3.11.1  # via super-csv
-edx-bulk-grades==0.8.0    # via -r requirements/base.in
+edx-bulk-grades==0.8.1    # via -r requirements/base.in
 edx-celeryutils==0.5.2    # via super-csv
 edx-opaque-keys==2.1.1    # via edx-bulk-grades
 fs==2.4.11                # via xblock
