@@ -12,7 +12,7 @@ certifi==2020.6.20        # via requests
 chardet==3.0.4            # via requests
 django-crum==0.7.7        # via super-csv
 django-model-utils==4.0.0  # via edx-bulk-grades, edx-celeryutils, super-csv
-django==2.2.16            # via django-crum, django-model-utils, djangorestframework, edx-bulk-grades, edx-celeryutils, jsonfield2, super-csv
+django==2.2.17            # via django-crum, django-model-utils, djangorestframework, edx-bulk-grades, edx-celeryutils, jsonfield2, super-csv
 djangorestframework==3.12.1  # via super-csv
 edx-bulk-grades==0.8.1    # via -r requirements/base.in
 edx-celeryutils==0.5.2    # via super-csv
@@ -32,7 +32,7 @@ path==13.1.0              # via path.py
 pbr==5.5.1                # via stevedore
 pymongo==3.11.0           # via edx-opaque-keys
 python-dateutil==2.8.1    # via xblock
-pytz==2020.1              # via celery, django, fs, xblock
+pytz==2020.4              # via celery, django, fs, xblock
 pyyaml==5.3.1             # via xblock
 requests==2.24.0          # via edx-bulk-grades, slumber
 simplejson==3.17.2        # via super-csv, xblock-utils
