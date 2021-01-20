@@ -89,3 +89,7 @@ test-js: ## run tests using npm
 	-npm test
 
 test: test-js test-python ## run tests
+
+install-local: ## install a local, editable copy of staff-graded-xblock for development
+	docker exec -t edx.devstack.lms bash -c '. /edx/app/edxapp/venvs/edxapp/bin/activate && cd /edx/app/edxapp/edx-platform && pip uninstall -y staff-graded-xblock && pip install -e /edx/src/staff_graded-xblock && pip freeze | grep staff_graded_xblock'
+	docker exec -t edx.devstack.studio bash -c '. /edx/app/edxapp/venvs/edxapp/bin/activate && cd /edx/app/edxapp/edx-platform && pip uninstall -y staff-graded-xblock && pip install -e /edx/src/staff_graded-xblock && pip freeze | grep staff_graded_xblock'
