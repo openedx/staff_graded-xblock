@@ -24,7 +24,7 @@ except ImportError:
     get_course_cohorts = lambda course_key: []
 
 try:
-    from common.djangoapps.course_modes import CourseMode
+    from common.djangoapps.course_modes.models import CourseMode
     modes_for_course = CourseMode.modes_for_course
 except ImportError:
     modes_for_course = lambda course_key: [('audit', 'Audit Track'), ('masters', "Master's Track"), ('verified', "Verified Track")]
