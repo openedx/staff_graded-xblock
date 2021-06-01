@@ -1,4 +1,4 @@
-name: Upgrade Requirements
+name: Test Team Notifications
 
 on:
   workflow_dispatch:
