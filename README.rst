@@ -149,3 +149,4 @@ If there are any errors compiling ``.po`` files run the following command to val
 See `django's i18n troubleshooting documentation
 <https://docs.djangoproject.com/en/1.11/topics/i18n/translation/#troubleshooting-ugettext-incorrectly-detects-python-format-in-strings-with-percent-signs>`_
 for more information.
+One more line
