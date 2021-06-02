@@ -57,7 +57,7 @@ edx-bulk-grades==0.8.10
     # via -r requirements/base.in
 edx-celeryutils==1.0.0
     # via super-csv
-edx-django-utils==4.0.0
+edx-django-utils==4.1.0
     # via super-csv
 edx-opaque-keys==2.2.1
     # via edx-bulk-grades
