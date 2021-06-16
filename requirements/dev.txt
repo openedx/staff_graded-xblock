@@ -112,7 +112,7 @@ djangorestframework==3.12.4
     # via
     #   -r requirements/base.txt
     #   super-csv
-edx-bulk-grades==0.8.10
+edx-bulk-grades==0.8.11
     # via
     #   -r requirements/base.in
     #   -r requirements/base.txt
@@ -147,7 +147,7 @@ future==0.18.2
     #   edx-celeryutils
 gitdb==4.0.7
     # via gitpython
-gitpython==3.1.17
+gitpython==3.1.14
     # via transifex-client
 idna==2.10
     # via
@@ -203,7 +203,7 @@ path.py==12.5.0
     #   -r requirements/base.in
     #   -r requirements/base.txt
     #   edx-i18n-tools
-path==15.1.2
+path==16.0.0
     # via
     #   -r requirements/base.txt
     #   path.py
