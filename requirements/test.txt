@@ -94,7 +94,7 @@ djangorestframework==3.12.4
     # via
     #   -r requirements/base.txt
     #   super-csv
-edx-bulk-grades==0.8.10
+edx-bulk-grades==0.8.11
     # via -r requirements/base.txt
 edx-celeryutils==1.0.0
     # via
@@ -164,7 +164,7 @@ packaging==20.9
     # via pytest
 path.py==12.5.0
     # via -r requirements/base.txt
-path==15.1.2
+path==16.0.0
     # via
     #   -r requirements/base.txt
     #   path.py
