@@ -56,7 +56,7 @@ edx-bulk-grades==0.9.1
     # via -r requirements/base.in
 edx-celeryutils==1.1.0
     # via super-csv
-edx-django-utils==4.2.0
+edx-django-utils==4.3.0
     # via super-csv
 edx-opaque-keys==2.2.2
     # via edx-bulk-grades
@@ -72,7 +72,7 @@ kombu==5.1.0
     # via celery
 lxml==4.6.3
     # via xblock
-mako==1.1.4
+mako==1.1.5
     # via xblock-utils
 markdown==3.3.4
     # via -r requirements/base.in
@@ -80,7 +80,7 @@ markupsafe==2.0.1
     # via
     #   mako
     #   xblock
-newrelic==6.8.0.163
+newrelic==6.8.1.164
     # via edx-django-utils
 path==16.2.0
     # via path.py
@@ -88,7 +88,7 @@ path.py==12.5.0
     # via -r requirements/base.in
 pbr==5.6.0
     # via stevedore
-prompt-toolkit==3.0.19
+prompt-toolkit==3.0.20
     # via click-repl
 psutil==5.8.0
     # via edx-django-utils
@@ -108,7 +108,7 @@ requests==2.26.0
     # via
     #   edx-bulk-grades
     #   slumber
-simplejson==3.17.3
+simplejson==3.17.5
     # via
     #   super-csv
     #   xblock-utils
@@ -122,7 +122,7 @@ slumber==0.7.1
     # via edx-bulk-grades
 sqlparse==0.4.1
     # via django
-stevedore==3.3.0
+stevedore==3.4.0
     # via
     #   edx-django-utils
     #   edx-opaque-keys
