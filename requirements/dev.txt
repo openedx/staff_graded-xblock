@@ -12,7 +12,7 @@ appdirs==1.4.4
     # via
     #   -r requirements/base.txt
     #   fs
-astroid==2.7.2
+astroid==2.7.3
     # via
     #   pylint
     #   pylint-celery
@@ -217,13 +217,14 @@ pep517==0.11.0
     # via pip-tools
 pip-tools==6.2.0
     # via -r requirements/pip_tools.in
-platformdirs==2.2.0
+platformdirs==2.3.0
     # via
     #   -r requirements/tox.txt
     #   pylint
     #   virtualenv
 pluggy==0.13.1
     # via
+    #   -c requirements/common_constraints.txt
     #   -r requirements/tox.txt
     #   pytest
     #   tox
@@ -264,7 +265,7 @@ pyparsing==2.4.7
     # via
     #   -r requirements/tox.txt
     #   packaging
-pytest==6.2.4
+pytest==6.2.5
     # via pytest-cov
 pytest-cov==2.12.1
     # via -r requirements/test.in

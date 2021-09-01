@@ -31,12 +31,13 @@ packaging==21.0
     # via
     #   -r requirements/tox.txt
     #   tox
-platformdirs==2.2.0
+platformdirs==2.3.0
     # via
     #   -r requirements/tox.txt
     #   virtualenv
 pluggy==0.13.1
     # via
+    #   -c requirements/common_constraints.txt
     #   -r requirements/tox.txt
     #   tox
 py==1.10.0
