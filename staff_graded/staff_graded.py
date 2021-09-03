@@ -7,7 +7,6 @@ import io
 import json
 import logging
 
-import markdown
 import pkg_resources
 from web_fragments.fragment import Fragment
 from webob import Response
@@ -18,6 +17,8 @@ from xblock.scorable import ScorableXBlockMixin, Score
 from xblockutils.resources import ResourceLoader
 from xblockutils.studio_editable import StudioEditableXBlockMixin
 
+import markdown
+
 try:
     from openedx.core.djangoapps.course_groups.cohorts import get_course_cohorts
 except ImportError:
@@ -27,7 +28,8 @@ try:
     from common.djangoapps.course_modes.models import CourseMode
     modes_for_course = CourseMode.modes_for_course
 except ImportError:
-    modes_for_course = lambda course_key: [('audit', 'Audit Track'), ('masters', "Master's Track"), ('verified', "Verified Track")]
+    modes_for_course = lambda course_key: [('audit', 'Audit Track'), ('masters', "Master's Track"),
+                                           ('verified', "Verified Track")]
 
 from bulk_grades.api import get_score, set_score, ScoreCSVProcessor
 
