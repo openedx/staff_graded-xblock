@@ -44,3 +44,4 @@ STATICI18N_PACKAGES = (
 )
 STATICI18N_ROOT = 'staff_graded/public/js'
 STATICI18N_OUTPUT_DIR = 'translations'
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'

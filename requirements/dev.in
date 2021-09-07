@@ -9,4 +9,4 @@ transifex-client
 -r base.in
 -r test.in
 -r tox.in
--r travis.in
+-r ci.in
