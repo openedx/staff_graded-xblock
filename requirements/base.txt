@@ -52,11 +52,11 @@ django-waffle==2.2.1
     # via edx-django-utils
 djangorestframework==3.12.4
     # via super-csv
-edx-bulk-grades==0.9.1
+edx-bulk-grades==0.9.2
     # via -r requirements/base.in
 edx-celeryutils==1.1.0
     # via super-csv
-edx-django-utils==4.3.0
+edx-django-utils==4.4.0
     # via super-csv
 edx-opaque-keys==2.2.2
     # via edx-bulk-grades
@@ -126,7 +126,7 @@ stevedore==3.4.0
     # via
     #   edx-django-utils
     #   edx-opaque-keys
-super-csv==2.1.0
+super-csv==2.1.1
     # via edx-bulk-grades
 urllib3==1.26.6
     # via requests
@@ -144,7 +144,7 @@ web-fragments==1.1.0
     #   xblock-utils
 webob==1.8.7
     # via xblock
-xblock==1.5.0
+xblock==1.5.1
     # via
     #   -r requirements/base.in
     #   xblock-utils
