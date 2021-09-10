@@ -30,7 +30,7 @@ click-repl==0.2.0
     # via celery
 django==2.2.24
     # via
-    #   -c requirements/common_constraints.txt
+    #   -c common_constraints.txt
     #   django-crum
     #   django-model-utils
     #   djangorestframework
@@ -53,7 +53,7 @@ django-waffle==2.2.1
 djangorestframework==3.12.4
     # via super-csv
 edx-bulk-grades==0.9.2
-    # via -r requirements/base.in
+    # via -r base.in
 edx-celeryutils==1.1.0
     # via super-csv
 edx-django-utils==4.4.0
@@ -75,7 +75,7 @@ lxml==4.6.3
 mako==1.1.5
     # via xblock-utils
 markdown==3.3.4
-    # via -r requirements/base.in
+    # via -r base.in
 markupsafe==2.0.1
     # via
     #   mako
@@ -85,7 +85,7 @@ newrelic==6.8.1.164
 path==16.2.0
     # via path.py
 path.py==12.5.0
-    # via -r requirements/base.in
+    # via -r base.in
 pbr==5.6.0
     # via stevedore
 prompt-toolkit==3.0.20
@@ -120,7 +120,7 @@ six==1.16.0
     #   python-dateutil
 slumber==0.7.1
     # via edx-bulk-grades
-sqlparse==0.4.1
+sqlparse==0.4.2
     # via django
 stevedore==3.4.0
     # via
@@ -139,17 +139,17 @@ wcwidth==0.2.5
     # via prompt-toolkit
 web-fragments==1.1.0
     # via
-    #   -r requirements/base.in
+    #   -r base.in
     #   xblock
     #   xblock-utils
 webob==1.8.7
     # via xblock
 xblock==1.5.1
     # via
-    #   -r requirements/base.in
+    #   -r base.in
     #   xblock-utils
 xblock-utils==2.2.0
-    # via -r requirements/base.in
+    # via -r base.in
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
