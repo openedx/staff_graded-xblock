@@ -30,7 +30,7 @@ certifi==2021.5.30
     # via
     #   -r requirements/base.txt
     #   requests
-charset-normalizer==2.0.4
+charset-normalizer==2.0.5
     # via
     #   -r requirements/base.txt
     #   requests
@@ -249,7 +249,7 @@ slumber==0.7.1
     # via
     #   -r requirements/base.txt
     #   edx-bulk-grades
-sqlparse==0.4.1
+sqlparse==0.4.2
     # via
     #   -r requirements/base.txt
     #   django
