@@ -14,7 +14,7 @@ celery==5.1.2
     # via edx-celeryutils
 certifi==2021.5.30
     # via requests
-charset-normalizer==2.0.5
+charset-normalizer==2.0.6
     # via requests
 click==7.1.2
     # via
@@ -80,7 +80,7 @@ markupsafe==2.0.1
     # via
     #   mako
     #   xblock
-newrelic==6.8.1.164
+newrelic==6.10.0.165
     # via edx-django-utils
 path==16.2.0
     # via path.py
