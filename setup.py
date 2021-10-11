@@ -45,7 +45,7 @@ def is_requirement(line):
 
 setup(
     name='staff_graded-xblock',
-    version='1.5.1',
+    version='1.6.0',
     description='Staff Graded XBlock',   # TODO: write a better description.
     license='AGPL v3',          # TODO: choose a license: 'AGPL v3' and 'Apache 2.0' are popular.
     classifiers=[
@@ -57,6 +57,9 @@ setup(
         'Programming Language :: Python :: 3.8',
         'Framework :: Django',
         'Framework :: Django :: 2.2',
+        'Framework :: Django :: 3.0',
+        'Framework :: Django :: 3.1',
+        'Framework :: Django :: 3.2',
     ],
     packages=[
         'staff_graded',

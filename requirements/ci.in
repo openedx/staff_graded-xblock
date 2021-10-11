@@ -1,0 +1,7 @@
+# Requirements for running tests in Github Actions
+-c constraints.txt
+
+-r tox.txt
+
+codecov
+six
