@@ -12,9 +12,9 @@ billiard==3.6.4.0
     # via celery
 celery==5.1.2
     # via edx-celeryutils
-certifi==2021.5.30
+certifi==2021.10.8
     # via requests
-charset-normalizer==2.0.5
+charset-normalizer==2.0.7
     # via requests
 click==7.1.2
     # via
@@ -22,7 +22,7 @@ click==7.1.2
     #   click-didyoumean
     #   click-plugins
     #   click-repl
-click-didyoumean==0.0.3
+click-didyoumean==0.3.0
     # via celery
 click-plugins==1.1.1
     # via celery
@@ -37,7 +37,7 @@ django==2.2.24
     #   edx-bulk-grades
     #   edx-celeryutils
     #   edx-django-utils
-    #   jsonfield2
+    #   jsonfield
     #   super-csv
 django-crum==0.7.9
     # via
@@ -54,7 +54,7 @@ djangorestframework==3.12.4
     # via super-csv
 edx-bulk-grades==0.9.2
     # via -r requirements/base.in
-edx-celeryutils==1.1.0
+edx-celeryutils==1.1.1
     # via super-csv
 edx-django-utils==4.4.0
     # via super-csv
@@ -64,9 +64,9 @@ fs==2.4.13
     # via xblock
 future==0.18.2
     # via edx-celeryutils
-idna==3.2
+idna==3.3
     # via requests
-jsonfield2==4.0.0.post0
+jsonfield==3.1.0
     # via edx-celeryutils
 kombu==5.1.0
     # via celery
@@ -80,7 +80,7 @@ markupsafe==2.0.1
     # via
     #   mako
     #   xblock
-newrelic==6.8.1.164
+newrelic==7.2.1.168
     # via edx-django-utils
 path==16.2.0
     # via path.py
@@ -96,7 +96,7 @@ pymongo==3.12.0
     # via edx-opaque-keys
 python-dateutil==2.8.2
     # via xblock
-pytz==2021.1
+pytz==2021.3
     # via
     #   celery
     #   django
@@ -128,7 +128,7 @@ stevedore==3.4.0
     #   edx-opaque-keys
 super-csv==2.1.1
     # via edx-bulk-grades
-urllib3==1.26.6
+urllib3==1.26.7
     # via requests
 vine==5.0.0
     # via
