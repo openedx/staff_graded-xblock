@@ -1,1 +1,2 @@
-include requirements/base.in
+include requirements/base.in\n
+include requirements/constraints.txt
