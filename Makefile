@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := help
 
 .PHONY: clean dev.clean dev.build dev.run test quality requirements \
-		quality-python test-js test-python
+		quality-python test-js test-python check_keywords
 
 REPO_NAME := staff_graded-xblock
 PACKAGE_NAME := staff_graded
@@ -96,3 +96,6 @@ test-js: ## run tests using npm
 	-npm test
 
 test: test-js test-python ## run tests
+
+check_keywords: ## Scan the Django models in all installed apps in this project for restricted field names
+	python manage.py check_reserved_keywords --override_file db_keyword_overrides.yml
