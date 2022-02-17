@@ -7,20 +7,20 @@ import io
 import json
 import logging
 
+import markdown
 import pkg_resources
 from web_fragments.fragment import Fragment
 from webob import Response
 from xblock.core import XBlock
-from xblock.fields import String, Float, Scope
+from xblock.fields import Float, Scope, String
 from xblock.runtime import NoSuchServiceError
 from xblock.scorable import ScorableXBlockMixin, Score
 from xblockutils.resources import ResourceLoader
 from xblockutils.studio_editable import StudioEditableXBlockMixin
 
-import markdown
-
 try:
-    from openedx.core.djangoapps.course_groups.cohorts import get_course_cohorts
+    from openedx.core.djangoapps.course_groups.cohorts import \
+        get_course_cohorts
 except ImportError:
     get_course_cohorts = lambda course_key: []
 
@@ -31,7 +31,7 @@ except ImportError:
     modes_for_course = lambda course_key: [('audit', 'Audit Track'), ('masters', "Master's Track"),
                                            ('verified', "Verified Track")]
 
-from bulk_grades.api import get_score, set_score, ScoreCSVProcessor
+from bulk_grades.api import ScoreCSVProcessor, get_score, set_score
 
 _ = lambda text: text
 
@@ -237,7 +237,7 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
             cohort=cohort).write_file(buf)
         resp = Response(buf.getvalue())
         resp.content_type = 'text/csv'
-        resp.content_disposition = 'attachment; filename="%s.csv"' % self.location
+        resp.content_disposition = f'attachment; filename="{self.location}"'
         return resp
 
     @XBlock.handler
