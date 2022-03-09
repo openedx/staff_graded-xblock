@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-amqp==5.0.9
+amqp==5.1.0
     # via kombu
 appdirs==1.4.4
     # via fs
@@ -18,7 +18,7 @@ certifi==2021.10.8
     # via requests
 charset-normalizer==2.0.12
     # via requests
-click==8.0.3
+click==8.0.4
     # via
     #   celery
     #   click-didyoumean
@@ -68,27 +68,27 @@ future==0.18.2
     # via edx-celeryutils
 idna==3.3
     # via requests
-importlib-metadata==4.11.1
+importlib-metadata==4.11.2
     # via markdown
 jsonfield==3.1.0
     # via edx-celeryutils
-kombu==5.2.3
+kombu==5.2.4
     # via celery
-lxml==4.7.1
+lxml==4.8.0
     # via xblock
 mako==1.1.6
     # via xblock-utils
 markdown==3.3.6
     # via -r requirements/base.in
-markupsafe==2.0.1
+markupsafe==2.1.0
     # via
     #   mako
     #   xblock
-newrelic==7.4.0.172
+newrelic==7.6.0.173
     # via edx-django-utils
-path==16.3.0
-    # via path.py
-path.py==12.5.0
+path==16.4.0
+    # via path-py
+path-py==12.5.0
     # via -r requirements/base.in
 pbr==5.8.1
     # via stevedore
@@ -130,7 +130,7 @@ stevedore==3.5.0
     # via
     #   edx-django-utils
     #   edx-opaque-keys
-super-csv==2.1.4
+super-csv==3.0.0
     # via edx-bulk-grades
 urllib3==1.26.8
     # via requests
@@ -152,7 +152,7 @@ xblock==1.6.1
     # via
     #   -r requirements/base.in
     #   xblock-utils
-xblock-utils==2.2.0
+xblock-utils==3.0.0
     # via -r requirements/base.in
 zipp==3.7.0
     # via importlib-metadata
