@@ -10,13 +10,13 @@ charset-normalizer==2.0.12
     # via requests
 codecov==2.1.12
     # via -r requirements/ci.in
-coverage==6.3.1
+coverage==6.3.2
     # via codecov
 distlib==0.3.4
     # via
     #   -r requirements/tox.txt
     #   virtualenv
-filelock==3.5.1
+filelock==3.6.0
     # via
     #   -r requirements/tox.txt
     #   tox
@@ -27,7 +27,7 @@ packaging==21.3
     # via
     #   -r requirements/tox.txt
     #   tox
-platformdirs==2.5.0
+platformdirs==2.5.1
     # via
     #   -r requirements/tox.txt
     #   virtualenv
@@ -57,9 +57,9 @@ toml==0.10.2
     #   tox
 tox==3.24.5
     # via -r requirements/tox.txt
-urllib3==1.26.8
+urllib3==1.26.9
     # via requests
-virtualenv==20.13.1
+virtualenv==20.13.4
     # via
     #   -r requirements/tox.txt
     #   tox
