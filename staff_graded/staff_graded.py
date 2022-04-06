@@ -237,7 +237,7 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
             cohort=cohort).write_file(buf)
         resp = Response(buf.getvalue())
         resp.content_type = 'text/csv'
-        resp.content_disposition = f'attachment; filename="{self.location}"'
+        resp.content_disposition = f'attachment; filename="{self.location}.csv"'
         return resp
 
     @XBlock.handler
