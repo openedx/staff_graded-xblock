@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-amqp==5.0.9
+amqp==5.1.1
     # via kombu
 appdirs==1.4.4
     # via fs
@@ -12,13 +12,13 @@ asgiref==3.5.0
     # via django
 billiard==3.6.4.0
     # via celery
-celery==5.2.3
+celery==5.2.6
     # via edx-celeryutils
 certifi==2021.10.8
     # via requests
 charset-normalizer==2.0.12
     # via requests
-click==8.0.3
+click==8.1.2
     # via
     #   celery
     #   click-didyoumean
@@ -30,7 +30,7 @@ click-plugins==1.1.1
     # via celery
 click-repl==0.2.0
     # via celery
-django==3.2.12
+django==3.2.13
     # via
     #   -c requirements/common_constraints.txt
     #   django-crum
@@ -50,7 +50,7 @@ django-model-utils==4.2.0
     #   edx-bulk-grades
     #   edx-celeryutils
     #   super-csv
-django-waffle==2.3.0
+django-waffle==2.4.1
     # via edx-django-utils
 djangorestframework==3.13.1
     # via super-csv
@@ -58,7 +58,7 @@ edx-bulk-grades==1.0.0
     # via -r requirements/base.in
 edx-celeryutils==1.2.1
     # via super-csv
-edx-django-utils==4.5.0
+edx-django-utils==4.6.0
     # via super-csv
 edx-opaque-keys==2.3.0
     # via edx-bulk-grades
@@ -68,31 +68,31 @@ future==0.18.2
     # via edx-celeryutils
 idna==3.3
     # via requests
-importlib-metadata==4.11.1
+importlib-metadata==4.11.3
     # via markdown
 jsonfield==3.1.0
     # via edx-celeryutils
-kombu==5.2.3
+kombu==5.2.4
     # via celery
-lxml==4.7.1
+lxml==4.8.0
     # via xblock
-mako==1.1.6
+mako==1.2.0
     # via xblock-utils
 markdown==3.3.6
     # via -r requirements/base.in
-markupsafe==2.0.1
+markupsafe==2.1.1
     # via
     #   mako
     #   xblock
-newrelic==7.4.0.172
+newrelic==7.10.0.175
     # via edx-django-utils
-path==16.3.0
-    # via path.py
-path.py==12.5.0
+path==16.4.0
+    # via path-py
+path-py==12.5.0
     # via -r requirements/base.in
 pbr==5.8.1
     # via stevedore
-prompt-toolkit==3.0.28
+prompt-toolkit==3.0.29
     # via click-repl
 psutil==5.9.0
     # via edx-django-utils
@@ -100,7 +100,7 @@ pymongo==3.12.3
     # via edx-opaque-keys
 python-dateutil==2.8.2
     # via xblock
-pytz==2021.3
+pytz==2022.1
     # via
     #   celery
     #   django
@@ -130,9 +130,9 @@ stevedore==3.5.0
     # via
     #   edx-django-utils
     #   edx-opaque-keys
-super-csv==2.1.4
+super-csv==3.0.0
     # via edx-bulk-grades
-urllib3==1.26.8
+urllib3==1.26.9
     # via requests
 vine==5.0.0
     # via
@@ -152,9 +152,9 @@ xblock==1.6.1
     # via
     #   -r requirements/base.in
     #   xblock-utils
-xblock-utils==2.2.0
+xblock-utils==3.0.0
     # via -r requirements/base.in
-zipp==3.7.0
+zipp==3.8.0
     # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
