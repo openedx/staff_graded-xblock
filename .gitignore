@@ -25,3 +25,6 @@ venv/
 node_modules/
 
 .tox
+
+# transifex exe
+tx

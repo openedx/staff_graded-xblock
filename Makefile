@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := help
 
 .PHONY: clean dev.clean dev.build dev.run test quality requirements \
-		quality-python test-js test-python
+		quality-python test-js test-python install_transifex_client
 
 REPO_NAME := staff_graded-xblock
 PACKAGE_NAME := staff_graded
@@ -96,3 +96,7 @@ test-js: ## run tests using npm
 	-npm test
 
 test: test-js test-python ## run tests
+
+install_transifex_client: ## Install the Transifex client
+	curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
+	git checkout -- LICENSE README.md
