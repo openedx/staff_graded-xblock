@@ -26,7 +26,7 @@ billiard==3.6.4.0
     # via
     #   -r requirements/base.txt
     #   celery
-celery==5.2.6
+celery==5.2.7
     # via
     #   -r requirements/base.txt
     #   edx-celeryutils
@@ -152,7 +152,7 @@ kombu==5.2.4
     #   celery
 lazy-object-proxy==1.7.1
     # via astroid
-lxml==4.8.0
+lxml==4.9.0
     # via
     #   -r requirements/base.txt
     #   xblock
