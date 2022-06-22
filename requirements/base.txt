@@ -12,9 +12,9 @@ asgiref==3.5.2
     # via django
 billiard==3.6.4.0
     # via celery
-celery==5.2.6
+celery==5.2.7
     # via edx-celeryutils
-certifi==2022.5.18.1
+certifi==2022.6.15
     # via requests
 cffi==1.15.0
     # via pynacl
@@ -53,7 +53,7 @@ django-model-utils==4.2.0
     #   edx-bulk-grades
     #   edx-celeryutils
     #   super-csv
-django-waffle==2.4.1
+django-waffle==2.5.0
     # via edx-django-utils
 djangorestframework==3.13.1
     # via super-csv
@@ -77,7 +77,7 @@ jsonfield==3.1.0
     # via edx-celeryutils
 kombu==5.2.4
     # via celery
-lxml==4.8.0
+lxml==4.9.0
     # via xblock
 mako==1.2.0
     # via xblock-utils
@@ -87,7 +87,7 @@ markupsafe==2.1.1
     # via
     #   mako
     #   xblock
-newrelic==7.10.0.175
+newrelic==7.12.0.176
     # via edx-django-utils
 path==16.4.0
     # via path-py
@@ -115,7 +115,7 @@ pytz==2022.1
     #   xblock
 pyyaml==6.0
     # via xblock
-requests==2.27.1
+requests==2.28.0
     # via
     #   edx-bulk-grades
     #   slumber
