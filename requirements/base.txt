@@ -33,9 +33,9 @@ click-plugins==1.1.1
     # via celery
 click-repl==0.2.0
     # via celery
-django==3.2.13
+django==3.2.14
     # via
-    #   -c requirements/common_constraints.txt
+    #   -c common_constraints.txt
     #   django-crum
     #   django-model-utils
     #   djangorestframework
@@ -58,7 +58,7 @@ django-waffle==2.5.0
 djangorestframework==3.13.1
     # via super-csv
 edx-bulk-grades==1.0.0
-    # via -r requirements/base.in
+    # via -r base.in
 edx-celeryutils==1.2.1
     # via super-csv
 edx-django-utils==5.0.0
@@ -71,8 +71,6 @@ future==0.18.2
     # via edx-celeryutils
 idna==3.3
     # via requests
-importlib-metadata==4.11.4
-    # via markdown
 jsonfield==3.1.0
     # via edx-celeryutils
 kombu==5.2.4
@@ -82,7 +80,7 @@ lxml==4.9.0
 mako==1.2.0
     # via xblock-utils
 markdown==3.3.7
-    # via -r requirements/base.in
+    # via -r base.in
 markupsafe==2.1.1
     # via
     #   mako
@@ -92,7 +90,7 @@ newrelic==7.10.0.175
 path==16.4.0
     # via path-py
 path-py==12.5.0
-    # via -r requirements/base.in
+    # via -r base.in
 pbr==5.9.0
     # via stevedore
 prompt-toolkit==3.0.29
@@ -149,19 +147,17 @@ wcwidth==0.2.5
     # via prompt-toolkit
 web-fragments==2.0.0
     # via
-    #   -r requirements/base.in
+    #   -r base.in
     #   xblock
     #   xblock-utils
 webob==1.8.7
     # via xblock
 xblock==1.6.1
     # via
-    #   -r requirements/base.in
+    #   -r base.in
     #   xblock-utils
 xblock-utils==3.0.0
-    # via -r requirements/base.in
-zipp==3.8.0
-    # via importlib-metadata
+    # via -r base.in
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
