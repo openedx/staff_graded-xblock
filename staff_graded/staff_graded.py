@@ -22,18 +22,18 @@ try:
     from openedx.core.djangoapps.course_groups.cohorts import \
         get_course_cohorts
 except ImportError:
-    get_course_cohorts = lambda course_key: []
+    get_course_cohorts = lambda course_key: []  # pylint: disable=unnecessary-lambda-assignment
 
 try:
     from common.djangoapps.course_modes.models import CourseMode
     modes_for_course = CourseMode.modes_for_course
 except ImportError:
-    modes_for_course = lambda course_key: [('audit', 'Audit Track'), ('masters', "Master's Track"),
+    modes_for_course = lambda course_key: [('audit', 'Audit Track'), ('masters', "Master's Track"), # pylint: disable=unnecessary-lambda-assignment
                                            ('verified', "Verified Track")]
 
 from bulk_grades.api import ScoreCSVProcessor, get_score, set_score
 
-_ = lambda text: text
+_ = lambda text: text   # pylint: disable=unnecessary-lambda-assignment
 
 log = logging.getLogger(__name__)
 
@@ -41,7 +41,7 @@ log = logging.getLogger(__name__)
 @XBlock.needs('settings')
 @XBlock.needs('i18n')
 @XBlock.needs('user')
-class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
+class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):    # pylint: disable=abstract-method
     """
     Staff Graded Points block
     """
@@ -100,21 +100,21 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
         frag.add_javascript(self.resource_string("static/js/src/staff_graded.js"))
         frag.initialize_js('StaffGradedXBlock')
 
-        context['id'] = self.location.html_id()
+        context['id'] = self.location.html_id()     # pylint: disable=no-member
         context['instructions'] = markdown.markdown(self.instructions)
         context['display_name'] = self.display_name
         context['is_staff'] = self.runtime.user_is_staff
 
-        course_id = self.location.course_key
+        course_id = self.location.course_key     # pylint: disable=no-member
         context['available_cohorts'] = [cohort.name for cohort in get_course_cohorts(course_id=course_id)]
         context['available_tracks'] = [
-            (mode.slug, mode.name) for mode in
+            (mode.slug, mode.name) for mode in       # pylint: disable=no-member
             modes_for_course(course_id, only_selectable=False)
             ]
 
         if context['is_staff']:
-            from crum import get_current_request
-            from django.middleware.csrf import get_token
+            from crum import get_current_request        # pylint: disable=import-outside-toplevel
+            from django.middleware.csrf import get_token      # pylint: disable=import-outside-toplevel
             context['import_url'] = self.runtime.handler_url(self, "csv_import_handler")
             context['export_url'] = self.runtime.handler_url(self, "csv_export_handler")
             context['poll_url'] = self.runtime.handler_url(self, "get_results_handler")
@@ -126,7 +126,7 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
                                           in ('csrf_token', 'import_url', 'export_url', 'poll_url', 'id')})
 
         try:
-            score = get_score(self.location, self.runtime.user_id) or {}
+            score = get_score(self.location, self.runtime.user_id) or {}      # pylint: disable=no-member
             context['grades_available'] = True
         except NoSuchServiceError:
             context['grades_available'] = False
@@ -163,7 +163,7 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
         Returns the Javascript translation file for the currently selected language, if any.
         Defaults to English if available.
         """
-        from django.utils import translation
+        from django.utils import translation     # pylint: disable=import-outside-toplevel
         locale_code = translation.get_language()
         if locale_code is None:
             return None
@@ -181,7 +181,7 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
         """
         Dummy method to generate initial i18n
         """
-        from django.utils import translation
+        from django.utils import translation      # pylint: disable=import-outside-toplevel
         return translation.gettext_noop('Dummy')
 
     @XBlock.handler
@@ -199,8 +199,8 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
         except KeyError:
             data = {'error_rows': [1], 'error_messages': [_('missing file')]}
         else:
-            log.info('Processing %d byte score file %s for %s', score_file.size, score_file.name, self.location)
-            block_id = self.location
+            log.info('Processing %d byte score file %s for %s', score_file.size, score_file.name, self.location)     # pylint: disable=no-member
+            block_id = self.location     # pylint: disable=no-member
             block_weight = self.weight
             processor = ScoreCSVProcessor(
                 block_id=str(block_id),
@@ -230,14 +230,14 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
 
         buf = io.StringIO()
         ScoreCSVProcessor(
-            block_id=str(self.location),
+            block_id=str(self.location),      # pylint: disable=no-member
             max_points=self.weight,
             display_name=self.display_name,
             track=track,
             cohort=cohort).write_file(buf)
         resp = Response(buf.getvalue())
         resp.content_type = 'text/csv'
-        resp.content_disposition = f'attachment; filename="{self.location}.csv"'
+        resp.content_disposition = f'attachment; filename="{self.location}.csv"'     # pylint: disable=no-member
         return resp
 
     @XBlock.handler
@@ -272,7 +272,7 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
         Returns:
             Score(raw_earned=float, raw_possible=float)
         """
-        score = get_score(self.runtime.user_id, self.location)
+        score = get_score(self.runtime.user_id, self.location)     # pylint: disable=no-member
         score = score or {'grade': 0, 'max_grade': 1}
         return Score(raw_earned=score['grade'], raw_possible=score['max_grade'])
 
@@ -291,7 +291,7 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
             None
         """
         state = json.dumps({'grader': self._get_current_username()})
-        set_score(self.location,
+        set_score(self.location,     # pylint: disable=no-member
                   self.runtime.user_id,
                   score.raw_earned,
                   score.raw_possible,
