@@ -16,11 +16,11 @@ asgiref==3.5.2
     # via
     #   -r requirements/base.txt
     #   django
-astroid==2.11.5
+astroid==2.12.12
     # via
     #   pylint
     #   pylint-celery
-attrs==21.4.0
+attrs==22.1.0
     # via pytest
 billiard==3.6.4.0
     # via
@@ -30,15 +30,15 @@ celery==5.2.7
     # via
     #   -r requirements/base.txt
     #   edx-celeryutils
-certifi==2022.5.18.1
+certifi==2022.9.24
     # via
     #   -r requirements/base.txt
     #   requests
-cffi==1.15.0
+cffi==1.15.1
     # via
     #   -r requirements/base.txt
     #   pynacl
-charset-normalizer==2.0.12
+charset-normalizer==2.1.1
     # via
     #   -r requirements/base.txt
     #   requests
@@ -69,11 +69,11 @@ click-repl==0.2.0
     #   celery
 code-annotations==1.3.0
     # via edx-lint
-coverage[toml]==6.4.1
+coverage[toml]==6.5.0
     # via pytest-cov
-dill==0.3.5.1
+dill==0.3.6
     # via pylint
-django==3.2.13
+django==3.2.16
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
@@ -96,11 +96,11 @@ django-model-utils==4.2.0
     #   edx-bulk-grades
     #   edx-celeryutils
     #   super-csv
-django-waffle==2.5.0
+django-waffle==3.0.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-djangorestframework==3.13.1
+djangorestframework==3.14.0
     # via
     #   -r requirements/base.txt
     #   super-csv
@@ -110,16 +110,18 @@ edx-celeryutils==1.2.1
     # via
     #   -r requirements/base.txt
     #   super-csv
-edx-django-utils==5.0.0
+edx-django-utils==5.2.0
     # via
     #   -r requirements/base.txt
     #   super-csv
-edx-lint==5.2.3
+edx-lint==5.3.0
     # via -r requirements/test.in
 edx-opaque-keys==2.3.0
     # via
     #   -r requirements/base.txt
     #   edx-bulk-grades
+exceptiongroup==1.0.0
+    # via pytest
 fs==2.4.16
     # via
     #   -r requirements/base.txt
@@ -128,11 +130,11 @@ future==0.18.2
     # via
     #   -r requirements/base.txt
     #   edx-celeryutils
-idna==3.3
+idna==3.4
     # via
     #   -r requirements/base.txt
     #   requests
-importlib-metadata==4.11.4
+importlib-metadata==5.0.0
     # via
     #   -r requirements/base.txt
     #   markdown
@@ -150,17 +152,17 @@ kombu==5.2.4
     # via
     #   -r requirements/base.txt
     #   celery
-lazy-object-proxy==1.7.1
+lazy-object-proxy==1.8.0
     # via astroid
-lxml==4.9.0
+lxml==4.9.1
     # via
     #   -r requirements/base.txt
     #   xblock
-mako==1.2.0
+mako==1.2.3
     # via
     #   -r requirements/base.txt
     #   xblock-utils
-markdown==3.3.7
+markdown==3.4.1
     # via -r requirements/base.txt
 markupsafe==2.1.1
     # via
@@ -170,19 +172,19 @@ markupsafe==2.1.1
     #   xblock
 mccabe==0.7.0
     # via pylint
-newrelic==7.10.0.175
+newrelic==8.4.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
 packaging==21.3
     # via pytest
-path==16.4.0
+path==16.5.0
     # via
     #   -r requirements/base.txt
     #   path-py
 path-py==12.5.0
     # via -r requirements/base.txt
-pbr==5.9.0
+pbr==5.11.0
     # via
     #   -r requirements/base.txt
     #   stevedore
@@ -190,21 +192,19 @@ platformdirs==2.5.2
     # via pylint
 pluggy==1.0.0
     # via pytest
-prompt-toolkit==3.0.29
+prompt-toolkit==3.0.31
     # via
     #   -r requirements/base.txt
     #   click-repl
-psutil==5.9.1
+psutil==5.9.3
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-py==1.11.0
-    # via pytest
 pycparser==2.21
     # via
     #   -r requirements/base.txt
     #   cffi
-pylint==2.14.1
+pylint==2.15.5
     # via
     #   edx-lint
     #   pylint-celery
@@ -228,9 +228,9 @@ pynacl==1.5.0
     #   edx-django-utils
 pyparsing==3.0.9
     # via packaging
-pytest==7.1.2
+pytest==7.2.0
     # via pytest-cov
-pytest-cov==3.0.0
+pytest-cov==4.0.0
     # via -r requirements/test.in
 python-dateutil==2.8.2
     # via
@@ -238,7 +238,7 @@ python-dateutil==2.8.2
     #   xblock
 python-slugify==6.1.2
     # via code-annotations
-pytz==2022.1
+pytz==2022.5
     # via
     #   -r requirements/base.txt
     #   celery
@@ -250,7 +250,7 @@ pyyaml==6.0
     #   -r requirements/base.txt
     #   code-annotations
     #   xblock
-requests==2.27.1
+requests==2.28.1
     # via
     #   -r requirements/base.txt
     #   edx-bulk-grades
@@ -271,17 +271,17 @@ slumber==0.7.1
     # via
     #   -r requirements/base.txt
     #   edx-bulk-grades
-sqlparse==0.4.2
+sqlparse==0.4.3
     # via
     #   -r requirements/base.txt
     #   django
-stevedore==3.5.0
+stevedore==4.1.0
     # via
     #   -r requirements/base.txt
     #   code-annotations
     #   edx-django-utils
     #   edx-opaque-keys
-super-csv==3.0.0
+super-csv==3.0.1
     # via
     #   -r requirements/base.txt
     #   edx-bulk-grades
@@ -292,13 +292,13 @@ tomli==2.0.1
     #   coverage
     #   pylint
     #   pytest
-tomlkit==0.11.0
+tomlkit==0.11.6
     # via pylint
-typing-extensions==4.2.0
+typing-extensions==4.4.0
     # via
     #   astroid
     #   pylint
-urllib3==1.26.9
+urllib3==1.26.12
     # via
     #   -r requirements/base.txt
     #   requests
@@ -329,7 +329,7 @@ xblock==1.6.1
     #   xblock-utils
 xblock-utils==3.0.0
     # via -r requirements/base.txt
-zipp==3.8.0
+zipp==3.10.0
     # via
     #   -r requirements/base.txt
     #   importlib-metadata
