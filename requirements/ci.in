@@ -3,5 +3,4 @@
 
 -r tox.txt
 
-codecov
 six
