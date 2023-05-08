@@ -14,7 +14,7 @@ billiard==3.6.4.0
     # via celery
 celery==5.2.7
     # via edx-celeryutils
-certifi==2022.12.7
+certifi==2023.5.7
     # via requests
 cffi==1.15.1
     # via pynacl
@@ -33,7 +33,7 @@ click-plugins==1.1.1
     # via celery
 click-repl==0.2.0
     # via celery
-django==3.2.18
+django==3.2.19
     # via
     #   -c requirements/common_constraints.txt
     #   django-crum
@@ -113,7 +113,7 @@ pytz==2023.3
     #   xblock
 pyyaml==6.0
     # via xblock
-requests==2.29.0
+requests==2.30.0
     # via
     #   edx-bulk-grades
     #   slumber
@@ -136,7 +136,7 @@ stevedore==5.0.0
     #   edx-opaque-keys
 super-csv==3.0.1
     # via edx-bulk-grades
-urllib3==1.26.15
+urllib3==2.0.2
     # via requests
 vine==5.0.0
     # via
