@@ -16,7 +16,7 @@ asgiref==3.6.0
     # via
     #   -r requirements/base.txt
     #   django
-astroid==2.15.4
+astroid==2.15.5
     # via
     #   pylint
     #   pylint-celery
@@ -216,7 +216,7 @@ pbr==5.11.1
     #   stevedore
 pip-tools==6.13.0
     # via -r requirements/pip_tools.in
-platformdirs==3.5.0
+platformdirs==3.5.1
     # via
     #   -r requirements/tox.txt
     #   pylint
