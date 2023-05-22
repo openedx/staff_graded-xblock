@@ -16,7 +16,7 @@ asgiref==3.6.0
     # via
     #   -r requirements/base.txt
     #   django
-astroid==2.15.4
+astroid==2.15.5
     # via
     #   pylint
     #   pylint-celery
@@ -216,7 +216,7 @@ pbr==5.11.1
     #   stevedore
 pip-tools==6.13.0
     # via -r requirements/pip_tools.in
-platformdirs==3.5.0
+platformdirs==3.5.1
     # via
     #   -r requirements/tox.txt
     #   pylint
@@ -254,7 +254,7 @@ pylint-celery==0.3
     # via edx-lint
 pylint-django==2.5.3
     # via edx-lint
-pylint-plugin-utils==0.7
+pylint-plugin-utils==0.8.2
     # via
     #   pylint-celery
     #   pylint-django
@@ -319,7 +319,7 @@ sqlparse==0.4.4
     # via
     #   -r requirements/base.txt
     #   django
-stevedore==5.0.0
+stevedore==5.1.0
     # via
     #   -r requirements/base.txt
     #   code-annotations

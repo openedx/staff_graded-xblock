@@ -130,7 +130,7 @@ slumber==0.7.1
     # via edx-bulk-grades
 sqlparse==0.4.4
     # via django
-stevedore==5.0.0
+stevedore==5.1.0
     # via
     #   edx-django-utils
     #   edx-opaque-keys
