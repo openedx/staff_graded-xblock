@@ -8,7 +8,7 @@ amqp==5.1.1
     # via kombu
 appdirs==1.4.4
     # via fs
-asgiref==3.6.0
+asgiref==3.7.2
     # via django
 billiard==3.6.4.0
     # via celery
@@ -113,7 +113,7 @@ pytz==2023.3
     #   xblock
 pyyaml==6.0
     # via xblock
-requests==2.30.0
+requests==2.31.0
     # via
     #   edx-bulk-grades
     #   slumber
@@ -130,12 +130,14 @@ slumber==0.7.1
     # via edx-bulk-grades
 sqlparse==0.4.4
     # via django
-stevedore==5.0.0
+stevedore==5.1.0
     # via
     #   edx-django-utils
     #   edx-opaque-keys
 super-csv==3.0.1
     # via edx-bulk-grades
+typing-extensions==4.6.2
+    # via asgiref
 urllib3==2.0.2
     # via requests
 vine==5.0.0
