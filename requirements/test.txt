@@ -187,9 +187,9 @@ pbr==5.11.1
     # via
     #   -r requirements/base.txt
     #   stevedore
-platformdirs==3.6.0
+platformdirs==3.8.0
     # via pylint
-pluggy==1.0.0
+pluggy==1.2.0
     # via pytest
 prompt-toolkit==3.0.38
     # via
@@ -225,7 +225,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-pytest==7.3.2
+pytest==7.4.0
     # via pytest-cov
 pytest-cov==4.1.0
     # via -r requirements/test.in
