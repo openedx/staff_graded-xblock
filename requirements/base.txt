@@ -24,7 +24,7 @@ cffi==1.15.1
     # via pynacl
 charset-normalizer==3.2.0
     # via requests
-click==8.1.4
+click==8.1.5
     # via
     #   celery
     #   click-didyoumean
@@ -170,7 +170,7 @@ xblock==1.6.2
     #   xblock-utils
 xblock-utils==3.2.0
     # via -r requirements/base.in
-zipp==3.16.0
+zipp==3.16.2
     # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
