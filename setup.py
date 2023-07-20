@@ -65,7 +65,7 @@ setup(
     name='staff_graded-xblock',
     version=VERSION,
     description='Staff Graded XBlock',   # TODO: write a better description.
-    long_description='Staff Graded XBlock',   # TODO: write a better description. 
+    long_description='Staff Graded XBlock',  # TODO: write a better description.
     license='AGPL v3',          # TODO: choose a license: 'AGPL v3' and 'Apache 2.0' are popular.
     classifiers=[
         'Development Status :: 5 - Production/Stable',
