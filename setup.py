@@ -67,6 +67,7 @@ setup(
     description='Staff Graded XBlock',   # TODO: write a better description.
     long_description='Staff Graded XBlock',  # TODO: write a better description.
     license='AGPL v3',          # TODO: choose a license: 'AGPL v3' and 'Apache 2.0' are popular.
+    url='https://github.com/openedx/staff_graded-xblock',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
