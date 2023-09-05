@@ -1,0 +1,14 @@
+/* CSS for StaffGradedXBlock */
+
+.staff_graded_block .count {
+    font-weight: bold;
+}
+
+.staff_graded_block p {
+    cursor: pointer;
+}
+
+.staff_graded_block .message {
+    color: red;
+    margin-left: 1.1em;
+}
