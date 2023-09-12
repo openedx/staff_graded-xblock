@@ -16,9 +16,9 @@ backports-zoneinfo[tzdata]==0.2.1
     #   kombu
 billiard==4.1.0
     # via celery
-boto3==1.28.40
+boto3==1.28.44
     # via fs-s3fs
-botocore==1.31.40
+botocore==1.31.44
     # via
     #   boto3
     #   s3transfer
@@ -43,7 +43,7 @@ click-plugins==1.1.1
     # via celery
 click-repl==0.3.0
     # via celery
-django==3.2.20
+django==3.2.21
     # via
     #   -c requirements/common_constraints.txt
     #   django-crum
@@ -133,7 +133,7 @@ python-dateutil==2.8.2
     #   botocore
     #   celery
     #   xblock
-pytz==2023.3
+pytz==2023.3.post1
     # via
     #   django
     #   djangorestframework
