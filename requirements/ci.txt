@@ -8,16 +8,16 @@ distlib==0.3.7
     # via
     #   -r requirements/tox.txt
     #   virtualenv
-filelock==3.12.3
+filelock==3.12.4
     # via
     #   -r requirements/tox.txt
     #   tox
     #   virtualenv
-packaging==23.1
+packaging==23.2
     # via
     #   -r requirements/tox.txt
     #   tox
-platformdirs==3.10.0
+platformdirs==3.11.0
     # via
     #   -r requirements/tox.txt
     #   virtualenv
@@ -42,10 +42,6 @@ tox==3.28.0
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/tox.txt
-typing-extensions==4.7.1
-    # via
-    #   -r requirements/tox.txt
-    #   filelock
 virtualenv==20.24.5
     # via
     #   -r requirements/tox.txt
