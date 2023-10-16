@@ -16,9 +16,9 @@ backports-zoneinfo[tzdata]==0.2.1
     #   kombu
 billiard==4.1.0
     # via celery
-boto3==1.28.62
+boto3==1.28.63
     # via fs-s3fs
-botocore==1.31.62
+botocore==1.31.63
     # via
     #   boto3
     #   s3transfer
@@ -122,7 +122,7 @@ pbr==5.11.1
     # via stevedore
 prompt-toolkit==3.0.39
     # via click-repl
-psutil==5.9.5
+psutil==5.9.6
     # via edx-django-utils
 pycparser==2.21
     # via cffi
