@@ -6,57 +6,52 @@
 #
 amqp==5.1.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   kombu
 appdirs==1.4.4
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   fs
 asgiref==3.7.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django
 astroid==2.15.8
     # via
     #   pylint
     #   pylint-celery
-backports-zoneinfo[tzdata]==0.2.1
-    # via
-    #   -r requirements/base.txt
-    #   celery
-    #   kombu
 billiard==4.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
 boto3==1.28.62
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   fs-s3fs
 botocore==1.31.62
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   boto3
     #   s3transfer
 celery==5.3.4
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-celeryutils
 certifi==2023.7.22
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   requests
 cffi==1.16.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   pynacl
 charset-normalizer==3.3.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   requests
 click==8.1.7
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
     #   click-didyoumean
     #   click-log
@@ -67,17 +62,17 @@ click==8.1.7
     #   edx-lint
 click-didyoumean==0.3.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
 click-log==0.4.0
     # via edx-lint
 click-plugins==1.1.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
 click-repl==0.3.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
 code-annotations==1.5.0
     # via edx-lint
@@ -87,8 +82,8 @@ dill==0.3.7
     # via pylint
 django==3.2.22
     # via
-    #   -c requirements/common_constraints.txt
-    #   -r requirements/base.txt
+    #   -c common_constraints.txt
+    #   -r base.txt
     #   django-crum
     #   django-model-utils
     #   django-waffle
@@ -101,59 +96,53 @@ django==3.2.22
     #   super-csv
 django-crum==0.7.9
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
     #   super-csv
 django-model-utils==4.3.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-bulk-grades
     #   edx-celeryutils
     #   super-csv
 django-waffle==4.0.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
 djangorestframework==3.14.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   super-csv
 edx-bulk-grades==1.0.2
-    # via -r requirements/base.txt
+    # via -r base.txt
 edx-celeryutils==1.2.3
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   super-csv
 edx-django-utils==5.7.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   super-csv
 edx-lint==5.3.4
-    # via -r requirements/test.in
+    # via -r test.in
 edx-opaque-keys==2.5.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-bulk-grades
-exceptiongroup==1.1.3
-    # via pytest
 fs==2.4.16
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   fs-s3fs
     #   openedx-django-pyfs
     #   xblock
 fs-s3fs==1.1.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   openedx-django-pyfs
 idna==3.4
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   requests
-importlib-metadata==6.8.0
-    # via
-    #   -r requirements/base.txt
-    #   markdown
 iniconfig==2.0.0
     # via pytest
 isort==5.12.0
@@ -162,37 +151,37 @@ jinja2==3.1.2
     # via code-annotations
 jmespath==1.0.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   boto3
     #   botocore
 jsonfield==3.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-celeryutils
 kombu==5.3.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
 lazy==1.6
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   xblock
 lazy-object-proxy==1.9.0
     # via astroid
 lxml==4.9.3
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   xblock
 mako==1.2.4
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   xblock
     #   xblock-utils
 markdown==3.5
-    # via -r requirements/base.txt
+    # via -r base.txt
 markupsafe==2.1.3
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   jinja2
     #   mako
     #   xblock
@@ -200,23 +189,23 @@ mccabe==0.7.0
     # via pylint
 newrelic==9.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
 openedx-django-pyfs==3.4.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   xblock
 packaging==23.2
     # via pytest
 path==16.7.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   path-py
 path-py==12.5.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 pbr==5.11.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   stevedore
 platformdirs==3.11.0
     # via pylint
@@ -224,15 +213,15 @@ pluggy==1.3.0
     # via pytest
 prompt-toolkit==3.0.39
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   click-repl
 psutil==5.9.5
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
 pycparser==2.21
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   cffi
 pylint==2.17.7
     # via
@@ -250,19 +239,19 @@ pylint-plugin-utils==0.8.2
     #   pylint-django
 pymongo==3.13.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-opaque-keys
 pynacl==1.5.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
 pytest==7.4.2
     # via pytest-cov
 pytest-cov==4.1.0
-    # via -r requirements/test.in
+    # via -r test.in
 python-dateutil==2.8.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   botocore
     #   celery
     #   xblock
@@ -270,113 +259,99 @@ python-slugify==8.0.1
     # via code-annotations
 pytz==2023.3.post1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django
     #   djangorestframework
     #   xblock
 pyyaml==6.0.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   code-annotations
     #   xblock
 requests==2.31.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-bulk-grades
     #   slumber
 s3transfer==0.7.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   boto3
 simplejson==3.19.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   super-csv
     #   xblock
     #   xblock-utils
 six==1.16.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-lint
     #   fs
     #   fs-s3fs
     #   python-dateutil
 slumber==0.7.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-bulk-grades
 sqlparse==0.4.4
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django
 stevedore==5.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   code-annotations
     #   edx-django-utils
     #   edx-opaque-keys
 super-csv==3.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-bulk-grades
 text-unidecode==1.3
     # via python-slugify
-tomli==2.0.1
-    # via
-    #   coverage
-    #   pylint
-    #   pytest
 tomlkit==0.12.1
     # via pylint
 typing-extensions==4.8.0
     # via
-    #   -r requirements/base.txt
-    #   asgiref
-    #   astroid
+    #   -r base.txt
     #   edx-opaque-keys
-    #   kombu
-    #   pylint
 tzdata==2023.3
     # via
-    #   -r requirements/base.txt
-    #   backports-zoneinfo
+    #   -r base.txt
     #   celery
-urllib3==1.26.17
+urllib3==1.26.18
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   botocore
     #   requests
 vine==5.0.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   amqp
     #   celery
     #   kombu
 wcwidth==0.2.8
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   prompt-toolkit
 web-fragments==2.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   xblock
     #   xblock-utils
 webob==1.8.7
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   xblock
 wrapt==1.15.0
     # via astroid
 xblock[django]==1.8.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   xblock-utils
 xblock-utils==4.0.0
-    # via -r requirements/base.txt
-zipp==3.17.0
-    # via
-    #   -r requirements/base.txt
-    #   importlib-metadata
+    # via -r base.txt
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
