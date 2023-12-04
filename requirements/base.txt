@@ -16,7 +16,7 @@ backports-zoneinfo[tzdata]==0.2.1
     #   kombu
 billiard==4.2.0
     # via celery
-celery==5.3.5
+celery==5.3.6
     # via edx-celeryutils
 certifi==2023.11.17
     # via requests
@@ -66,15 +66,15 @@ edx-bulk-grades==1.0.2
     # via -r requirements/base.in
 edx-celeryutils==1.2.3
     # via super-csv
-edx-django-utils==5.8.0
+edx-django-utils==5.9.0
     # via super-csv
 edx-opaque-keys==2.5.1
     # via edx-bulk-grades
 fs==2.4.16
     # via xblock
-idna==3.4
+idna==3.6
     # via requests
-importlib-metadata==6.8.0
+importlib-metadata==7.0.0
     # via markdown
 jsonfield==3.1.0
     # via edx-celeryutils
@@ -157,7 +157,7 @@ vine==5.1.0
     #   amqp
     #   celery
     #   kombu
-wcwidth==0.2.10
+wcwidth==0.2.12
     # via prompt-toolkit
 web-fragments==2.1.0
     # via
