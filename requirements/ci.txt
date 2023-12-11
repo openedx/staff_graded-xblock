@@ -30,9 +30,8 @@ packaging==23.2
     #   -r requirements/tox.txt
     #   pyproject-api
     #   tox
-platformdirs==3.11.0
+platformdirs==4.1.0
     # via
-    #   -c requirements/common_constraints.txt
     #   -r requirements/tox.txt
     #   tox
     #   virtualenv
@@ -51,9 +50,9 @@ tomli==2.0.1
     #   -r requirements/tox.txt
     #   pyproject-api
     #   tox
-tox==4.11.3
+tox==4.11.4
     # via -r requirements/tox.txt
-virtualenv==20.24.6
+virtualenv==20.25.0
     # via
     #   -r requirements/tox.txt
     #   tox
