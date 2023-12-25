@@ -74,13 +74,13 @@ fs==2.4.16
     # via xblock
 idna==3.6
     # via requests
-importlib-metadata==7.0.0
+importlib-metadata==7.0.1
     # via markdown
 jsonfield==3.1.0
     # via edx-celeryutils
 kombu==5.3.4
     # via celery
-lxml==4.9.3
+lxml==4.9.4
     # via xblock
 mako==1.3.0
     # via xblock
