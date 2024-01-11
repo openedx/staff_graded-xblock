@@ -6,15 +6,15 @@
 #
 amqp==5.2.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   kombu
 appdirs==1.4.4
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   fs
 asgiref==3.7.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django
 astroid==3.0.2
     # via
@@ -22,43 +22,43 @@ astroid==3.0.2
     #   pylint-celery
 backports-zoneinfo[tzdata]==0.2.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   backports-zoneinfo
     #   celery
     #   kombu
 billiard==4.2.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
 build==1.0.3
     # via pip-tools
 cachetools==5.3.2
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   tox
 celery==5.3.6
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-celeryutils
 certifi==2023.11.17
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   requests
 cffi==1.16.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   pynacl
 chardet==5.2.0
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   tox
 charset-normalizer==3.3.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   requests
 click==8.1.7
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
     #   click-didyoumean
     #   click-log
@@ -70,23 +70,23 @@ click==8.1.7
     #   pip-tools
 click-didyoumean==0.3.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
 click-log==0.4.0
     # via edx-lint
 click-plugins==1.1.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
 click-repl==0.3.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
 code-annotations==1.5.0
     # via edx-lint
 colorama==0.4.6
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   tox
 coverage[toml]==7.3.3
     # via
@@ -96,12 +96,12 @@ dill==0.3.7
     # via pylint
 distlib==0.3.8
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   virtualenv
 django==3.2.23
     # via
-    #   -c requirements/common_constraints.txt
-    #   -r requirements/base.txt
+    #   -c common_constraints.txt
+    #   -r base.txt
     #   django-appconf
     #   django-crum
     #   django-model-utils
@@ -118,95 +118,95 @@ django-appconf==1.0.6
     # via django-statici18n
 django-crum==0.7.9
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
     #   super-csv
 django-model-utils==4.3.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-bulk-grades
     #   edx-celeryutils
     #   super-csv
 django-statici18n==2.4.0
-    # via -r requirements/dev.in
+    # via -r dev.in
 django-waffle==4.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
 djangorestframework==3.14.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   super-csv
 edx-bulk-grades==1.0.2
     # via
-    #   -r requirements/base.in
-    #   -r requirements/base.txt
+    #   -r base.in
+    #   -r base.txt
 edx-celeryutils==1.2.3
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   super-csv
 edx-django-utils==5.9.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   super-csv
 edx-i18n-tools==1.3.0
-    # via -r requirements/dev.in
+    # via -r dev.in
 edx-lint==5.3.6
-    # via -r requirements/test.in
+    # via -r test.in
 edx-opaque-keys==2.5.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-bulk-grades
 exceptiongroup==1.2.0
     # via pytest
 filelock==3.13.1
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   tox
     #   virtualenv
 fs==2.4.16
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   xblock
 idna==3.6
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   requests
 importlib-metadata==7.0.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   build
     #   markdown
 iniconfig==2.0.0
     # via pytest
 isort==5.13.2
     # via pylint
-jinja2==3.1.2
+jinja2==3.1.3
     # via code-annotations
 jsonfield==3.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-celeryutils
 kombu==5.3.4
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
 lxml==4.9.3
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-i18n-tools
     #   xblock
 mako==1.3.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   xblock
 markdown==3.5.1
     # via
-    #   -r requirements/base.in
-    #   -r requirements/base.txt
+    #   -r base.in
+    #   -r base.txt
 markupsafe==2.1.3
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   jinja2
     #   mako
     #   xblock
@@ -214,54 +214,54 @@ mccabe==0.7.0
     # via pylint
 newrelic==9.3.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
 packaging==23.2
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   build
     #   pyproject-api
     #   pytest
     #   tox
 path==16.9.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-i18n-tools
     #   path-py
 path-py==12.5.0
     # via
-    #   -r requirements/base.in
-    #   -r requirements/base.txt
+    #   -r base.in
+    #   -r base.txt
 pbr==6.0.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   stevedore
 pip-tools==7.3.0
-    # via -r requirements/pip_tools.in
+    # via -r pip_tools.in
 platformdirs==4.1.0
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   pylint
     #   tox
     #   virtualenv
 pluggy==1.3.0
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   pytest
     #   tox
 polib==1.2.0
     # via edx-i18n-tools
 prompt-toolkit==3.0.43
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   click-repl
 psutil==5.9.7
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
 pycparser==2.21
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   cffi
 pylint==3.0.3
     # via
@@ -279,81 +279,81 @@ pylint-plugin-utils==0.8.2
     #   pylint-django
 pymongo==3.13.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-opaque-keys
 pynacl==1.5.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
 pyproject-api==1.6.1
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   tox
 pyproject-hooks==1.0.0
     # via build
 pytest==7.4.3
     # via pytest-cov
 pytest-cov==4.1.0
-    # via -r requirements/test.in
+    # via -r test.in
 python-dateutil==2.8.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
     #   xblock
 python-slugify==8.0.1
     # via code-annotations
 pytz==2023.3.post1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django
     #   djangorestframework
     #   xblock
 pyyaml==6.0.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   code-annotations
     #   edx-i18n-tools
     #   xblock
 requests==2.31.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-bulk-grades
     #   slumber
 simplejson==3.19.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   super-csv
     #   xblock
 six==1.16.0
     # via
-    #   -r requirements/base.txt
-    #   -r requirements/ci.in
+    #   -r base.txt
+    #   -r ci.in
     #   edx-lint
     #   fs
     #   python-dateutil
 slumber==0.7.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-bulk-grades
 sqlparse==0.4.4
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django
 stevedore==5.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   code-annotations
     #   edx-django-utils
     #   edx-opaque-keys
 super-csv==3.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-bulk-grades
 text-unidecode==1.3
     # via python-slugify
 tomli==2.0.1
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   build
     #   coverage
     #   pip-tools
@@ -366,11 +366,11 @@ tomlkit==0.12.3
     # via pylint
 tox==4.11.4
     # via
-    #   -r requirements/tox.in
-    #   -r requirements/tox.txt
+    #   -r tox.in
+    #   -r tox.txt
 typing-extensions==4.9.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   asgiref
     #   astroid
     #   edx-opaque-keys
@@ -378,45 +378,45 @@ typing-extensions==4.9.0
     #   pylint
 tzdata==2023.3
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   backports-zoneinfo
     #   celery
 urllib3==2.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   requests
 vine==5.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   amqp
     #   celery
     #   kombu
 virtualenv==20.25.0
     # via
-    #   -r requirements/tox.txt
+    #   -r tox.txt
     #   tox
 wcwidth==0.2.12
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   prompt-toolkit
 web-fragments==2.1.0
     # via
-    #   -r requirements/base.in
-    #   -r requirements/base.txt
+    #   -r base.in
+    #   -r base.txt
     #   xblock
 webob==1.8.7
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   xblock
 wheel==0.42.0
     # via pip-tools
 xblock==1.9.0
     # via
-    #   -r requirements/base.in
-    #   -r requirements/base.txt
+    #   -r base.in
+    #   -r base.txt
 zipp==3.17.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
