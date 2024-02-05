@@ -18,7 +18,7 @@ billiard==4.2.0
     # via celery
 celery==5.3.6
     # via edx-celeryutils
-certifi==2023.11.17
+certifi==2024.2.2
     # via requests
 cffi==1.16.0
     # via pynacl
@@ -64,7 +64,7 @@ djangorestframework==3.14.0
     # via super-csv
 edx-bulk-grades==1.0.2
     # via -r requirements/base.in
-edx-celeryutils==1.2.3
+edx-celeryutils==1.2.5
     # via super-csv
 edx-django-utils==5.10.1
     # via super-csv
@@ -82,17 +82,17 @@ kombu==5.3.5
     # via celery
 lxml==5.1.0
     # via xblock
-mako==1.3.0
+mako==1.3.2
     # via xblock
 markdown==3.5.2
     # via -r requirements/base.in
-markupsafe==2.1.4
+markupsafe==2.1.5
     # via
     #   mako
     #   xblock
 newrelic==9.6.0
     # via edx-django-utils
-path==16.9.0
+path==16.10.0
     # via path-py
 path-py==12.5.0
     # via -r requirements/base.in
@@ -112,7 +112,7 @@ python-dateutil==2.8.2
     # via
     #   celery
     #   xblock
-pytz==2023.3.post1
+pytz==2024.1
     # via
     #   django
     #   djangorestframework
@@ -150,7 +150,7 @@ tzdata==2023.4
     # via
     #   backports-zoneinfo
     #   celery
-urllib3==2.1.0
+urllib3==2.2.0
     # via requests
 vine==5.1.0
     # via
