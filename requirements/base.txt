@@ -90,7 +90,7 @@ markupsafe==2.1.5
     # via
     #   mako
     #   xblock
-newrelic==9.6.0
+newrelic==9.7.0
     # via edx-django-utils
 path==16.10.0
     # via path-py
@@ -135,13 +135,13 @@ slumber==0.7.1
     # via edx-bulk-grades
 sqlparse==0.4.4
     # via django
-stevedore==5.1.0
+stevedore==5.2.0
     # via
     #   edx-django-utils
     #   edx-opaque-keys
 super-csv==3.1.0
     # via edx-bulk-grades
-typing-extensions==4.9.0
+typing-extensions==4.10.0
     # via
     #   asgiref
     #   edx-opaque-keys
