@@ -24,6 +24,7 @@ backports-zoneinfo[tzdata]==0.2.1
     # via
     #   -r requirements/base.txt
     #   celery
+    #   django
     #   kombu
 billiard==4.2.0
     # via
@@ -76,7 +77,7 @@ coverage[toml]==7.4.3
     # via pytest-cov
 dill==0.3.8
     # via pylint
-django==3.2.24
+django==4.2.10
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
@@ -224,11 +225,11 @@ pynacl==1.5.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-pytest==8.0.2
+pytest==8.1.0
     # via pytest-cov
 pytest-cov==4.1.0
     # via -r requirements/test.in
-python-dateutil==2.8.2
+python-dateutil==2.9.0.post0
     # via
     #   -r requirements/base.txt
     #   celery
@@ -238,7 +239,6 @@ python-slugify==8.0.4
 pytz==2024.1
     # via
     #   -r requirements/base.txt
-    #   django
     #   djangorestframework
     #   xblock
 pyyaml==6.0.1
@@ -287,7 +287,7 @@ tomli==2.0.1
     #   coverage
     #   pylint
     #   pytest
-tomlkit==0.12.3
+tomlkit==0.12.4
     # via pylint
 typing-extensions==4.10.0
     # via
@@ -324,7 +324,7 @@ webob==1.8.7
     # via
     #   -r requirements/base.txt
     #   xblock
-xblock==1.10.0
+xblock==2.0.0
     # via -r requirements/base.txt
 zipp==3.17.0
     # via
