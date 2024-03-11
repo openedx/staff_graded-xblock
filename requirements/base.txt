@@ -38,7 +38,7 @@ click-plugins==1.1.1
     # via celery
 click-repl==0.3.0
     # via celery
-django==4.2.10
+django==4.2.11
     # via
     #   -c requirements/common_constraints.txt
     #   django-crum
@@ -67,7 +67,7 @@ edx-bulk-grades==1.0.2
     # via -r requirements/base.in
 edx-celeryutils==1.2.5
     # via super-csv
-edx-django-utils==5.10.1
+edx-django-utils==5.11.0
     # via super-csv
 edx-opaque-keys==2.5.1
     # via edx-bulk-grades
@@ -75,7 +75,7 @@ fs==2.4.16
     # via xblock
 idna==3.6
     # via requests
-importlib-metadata==7.0.1
+importlib-metadata==7.0.2
     # via markdown
 jsonfield==3.1.0
     # via edx-celeryutils

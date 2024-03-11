@@ -96,7 +96,7 @@ distlib==0.3.8
     # via
     #   -r requirements/tox.txt
     #   virtualenv
-django==4.2.10
+django==4.2.11
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
@@ -143,7 +143,7 @@ edx-celeryutils==1.2.5
     # via
     #   -r requirements/base.txt
     #   super-csv
-edx-django-utils==5.10.1
+edx-django-utils==5.11.0
     # via
     #   -r requirements/base.txt
     #   super-csv
@@ -170,7 +170,7 @@ idna==3.6
     # via
     #   -r requirements/base.txt
     #   requests
-importlib-metadata==7.0.1
+importlib-metadata==7.0.2
     # via
     #   -r requirements/base.txt
     #   build
@@ -214,7 +214,7 @@ newrelic==9.7.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-packaging==23.2
+packaging==24.0
     # via
     #   -r requirements/tox.txt
     #   build
@@ -234,7 +234,7 @@ pbr==6.0.0
     # via
     #   -r requirements/base.txt
     #   stevedore
-pip-tools==7.4.0
+pip-tools==7.4.1
     # via -r requirements/pip_tools.in
 platformdirs==4.2.0
     # via
@@ -291,7 +291,7 @@ pyproject-hooks==1.0.0
     # via
     #   build
     #   pip-tools
-pytest==8.1.0
+pytest==8.1.1
     # via pytest-cov
 pytest-cov==4.1.0
     # via -r requirements/test.in
@@ -363,7 +363,7 @@ tomli==2.0.1
     #   tox
 tomlkit==0.12.4
     # via pylint
-tox==4.13.0
+tox==4.14.1
     # via
     #   -r requirements/tox.in
     #   -r requirements/tox.txt
