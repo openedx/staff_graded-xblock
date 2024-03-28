@@ -118,7 +118,6 @@ python-dateutil==2.9.0.post0
     #   celery
     #   xblock
 pytz==2024.1
-    # via xblock
 pyyaml==6.0.1
     # via xblock
 requests==2.31.0

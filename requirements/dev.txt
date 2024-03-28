@@ -26,7 +26,6 @@ backports-zoneinfo[tzdata]==0.2.1 ; python_version < "3.9"
     #   -r requirements/base.txt
     #   celery
     #   django
-    #   djangorestframework
     #   kombu
 billiard==4.2.0
     # via
