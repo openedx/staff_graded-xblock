@@ -26,6 +26,7 @@ backports-zoneinfo[tzdata]==0.2.1 ; python_version < "3.9"
     #   -r requirements/base.txt
     #   celery
     #   django
+    #   djangorestframework
     #   kombu
 billiard==4.2.0
     # via
@@ -110,13 +111,13 @@ djangorestframework==3.15.1
     # via
     #   -r requirements/base.txt
     #   super-csv
-edx-bulk-grades==1.0.2
+edx-bulk-grades==1.1.0
     # via -r requirements/base.txt
 edx-celeryutils==1.2.5
     # via
     #   -r requirements/base.txt
     #   super-csv
-edx-django-utils==5.11.0
+edx-django-utils==5.12.0
     # via
     #   -r requirements/base.txt
     #   super-csv
@@ -155,7 +156,7 @@ kombu==5.3.6
     # via
     #   -r requirements/base.txt
     #   celery
-lxml==5.1.0
+lxml==5.2.0
     # via
     #   -r requirements/base.txt
     #   xblock
@@ -201,7 +202,7 @@ psutil==5.9.8
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-pycparser==2.21
+pycparser==2.22
     # via
     #   -r requirements/base.txt
     #   cffi

@@ -65,11 +65,11 @@ django-waffle==4.1.0
     # via edx-django-utils
 djangorestframework==3.15.1
     # via super-csv
-edx-bulk-grades==1.0.2
+edx-bulk-grades==1.1.0
     # via -r requirements/base.in
 edx-celeryutils==1.2.5
     # via super-csv
-edx-django-utils==5.11.0
+edx-django-utils==5.12.0
     # via super-csv
 edx-opaque-keys==2.5.1
     # via edx-bulk-grades
@@ -85,7 +85,7 @@ jsonfield==3.1.0
     # via edx-celeryutils
 kombu==5.3.6
     # via celery
-lxml==5.1.0
+lxml==5.2.0
     # via xblock
 mako==1.3.2
     # via xblock
@@ -107,7 +107,7 @@ prompt-toolkit==3.0.43
     # via click-repl
 psutil==5.9.8
     # via edx-django-utils
-pycparser==2.21
+pycparser==2.22
     # via cffi
 pymongo==3.13.0
     # via edx-opaque-keys
@@ -118,6 +118,7 @@ python-dateutil==2.9.0.post0
     #   celery
     #   xblock
 pytz==2024.1
+    # via xblock
 pyyaml==6.0.1
     # via xblock
 requests==2.31.0
