@@ -20,7 +20,7 @@ distlib==0.3.8
     # via
     #   -r requirements/tox.txt
     #   virtualenv
-filelock==3.13.3
+filelock==3.13.4
     # via
     #   -r requirements/tox.txt
     #   tox
@@ -35,7 +35,7 @@ platformdirs==4.2.0
     #   -r requirements/tox.txt
     #   tox
     #   virtualenv
-pluggy==1.4.0
+pluggy==1.5.0
     # via
     #   -r requirements/tox.txt
     #   tox
@@ -52,7 +52,7 @@ tomli==2.0.1
     #   tox
 tox==4.14.2
     # via -r requirements/tox.txt
-virtualenv==20.25.1
+virtualenv==20.25.3
     # via
     #   -r requirements/tox.txt
     #   tox
