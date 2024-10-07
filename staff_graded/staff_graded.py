@@ -3,12 +3,12 @@ XBlock for Staff Graded Points
 """
 
 
+import os
 import io
 import json
 import logging
 
 import markdown
-import pkg_resources
 from web_fragments.fragment import Fragment
 from webob import Response
 from xblock.core import XBlock
@@ -83,8 +83,8 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
 
     def resource_string(self, path):
         """Handy helper for getting resources from our kit."""
-        data = pkg_resources.resource_string(__name__, path)
-        return data.decode("utf8")
+        loader = ResourceLoader(__name__)
+        return loader.load_unicode(path)
 
     def student_view(self, context=None):
         """
@@ -173,11 +173,12 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
             return None
         text_js = 'public/js/translations/{locale_code}/text.js'
         lang_code = locale_code.split('-')[0]
+        module_dir = os.path.dirname(__name__)
         for code in (locale_code, lang_code, 'en'):
-            loader = ResourceLoader(__name__)
-            if pkg_resources.resource_exists(
-                    loader.module_name, text_js.format(locale_code=code)):
-                return text_js.format(locale_code=code)
+            resource_name = text_js.format(locale_code=code)
+            resource_path = os.path.join(module_dir, resource_name)
+            if os.path.exists(resource_path):
+                return resource_name
         return None
 
     @staticmethod
