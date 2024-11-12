@@ -6,9 +6,9 @@ XBlock for Staff Graded Points
 import io
 import json
 import logging
+import os
 
 import markdown
-import pkg_resources
 from web_fragments.fragment import Fragment
 from webob import Response
 from xblock.core import XBlock
@@ -77,14 +77,15 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
 
     editable_fields = ('display_name', 'instructions', 'weight')
 
+    loader = ResourceLoader(__name__)
+
     def _get_current_username(self):
         return self.runtime.service(self, 'user').get_current_user().opt_attrs.get(
             'edx-platform.username')
 
     def resource_string(self, path):
         """Handy helper for getting resources from our kit."""
-        data = pkg_resources.resource_string(__name__, path)
-        return data.decode("utf8")
+        return self.loader.load_unicode(path)
 
     def student_view(self, context=None):
         """
@@ -93,7 +94,6 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
         """
         frag = Fragment()
         frag.add_css(self.resource_string("static/css/staff_graded.css"))
-        loader = ResourceLoader(__name__)
         _ = self.runtime.service(self, "i18n").ugettext
 
         # Add i18n js
@@ -123,7 +123,7 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
             context['export_url'] = self.runtime.handler_url(self, "csv_export_handler")
             context['poll_url'] = self.runtime.handler_url(self, "get_results_handler")
             context['csrf_token'] = get_token(get_current_request())
-            frag.add_javascript(loader.load_unicode('static/js/src/staff_graded.js'))
+            frag.add_javascript(self.loader.load_unicode('static/js/src/staff_graded.js'))
             frag.initialize_js('StaffGradedProblem',
                                json_args={k: context[k]
                                           for k
@@ -140,7 +140,7 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
                 context['score_string'] = _('{score} / {total} points').format(score=grade, total=self.weight)
             else:
                 context['score_string'] = _('{total} points possible').format(total=self.weight)
-        frag.add_content(loader.render_django_template('static/html/staff_graded.html', context))
+        frag.add_content(self.loader.render_django_template('static/html/staff_graded.html', context))
         return frag
 
     # TO-DO: change this to create the scenarios you'd like to see in the
@@ -169,15 +169,16 @@ class StaffGradedXBlock(StudioEditableXBlockMixin, ScorableXBlockMixin, XBlock):
         """
         from django.utils import translation     # pylint: disable=import-outside-toplevel
         locale_code = translation.get_language()
+        module_dir = os.path.dirname(__name__)
         if locale_code is None:
             return None
         text_js = 'public/js/translations/{locale_code}/text.js'
         lang_code = locale_code.split('-')[0]
         for code in (locale_code, lang_code, 'en'):
-            loader = ResourceLoader(__name__)
-            if pkg_resources.resource_exists(
-                    loader.module_name, text_js.format(locale_code=code)):
-                return text_js.format(locale_code=code)
+            resource_name = text_js.format(locale_code=code)
+            resource_path = os.path.join(module_dir, resource_name)
+            if os.path.exists(resource_path):
+                return resource_name
         return None
 
     @staticmethod
